@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://data.laatuhieronta.fi/vastuu-ja-lainsaadanto#article",
+  "url": "https://laatuhieronta.fi/vastuu-ja-lainsaadanto",
+  "name": "Vastuu ja lainsäädäntö",
+  "inLanguage": "fi",
+  "isPartOf": {
+    "@id": "https://data.laatuhieronta.fi/website#site"
+  },
+  "about": [
+    {
+      "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset"
+    },
+    {
+      "@type": "Thing",
+      "name": "Koulutetun hierojan vastuu"
+    },
+    {
+      "@type": "Thing",
+      "name": "Lainsäädäntö"
+    },
+    {
+      "@type": "Thing",
+      "name": "Omavalvonta"
+    }
+  ],
+  "author": {
+    "@id": "https://data.laatuhieronta.fi/riikka-kallio#person"
+  },
+  "publisher": {
+    "@id": "https://data.laatuhieronta.fi/organization#org"
+  },
+  "citation": {
+    "@id": "https://data.laatuhieronta.fi/lainsaadanto-viitteet#page"
+  }
+}

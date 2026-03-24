@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://data.laatuhieronta.fi/ylidokumentointi-hieronnassa#article",
+  "url": "https://laatuhieronta.fi/ylidokumentointi-hieronnassa",
+  "name": "Ylidokumentointi hieronnassa",
+  "inLanguage": "fi",
+  "isPartOf": {
+    "@id": "https://data.laatuhieronta.fi/website#site"
+  },
+  "about": [
+    {
+      "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset"
+    },
+    {
+      "@type": "Thing",
+      "name": "Ylidokumentointi"
+    },
+    {
+      "@type": "Thing",
+      "name": "Omavalvonta"
+    },
+    {
+      "@type": "Thing",
+      "name": "Dokumentointi"
+    }
+  ],
+  "author": {
+    "@id": "https://data.laatuhieronta.fi/riikka-kallio#person"
+  },
+  "publisher": {
+    "@id": "https://data.laatuhieronta.fi/organization#org"
+  }
+}

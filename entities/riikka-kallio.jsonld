@@ -1,0 +1,19 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://data.laatuhieronta.fi/riikka-kallio#person",
+  "name": "Riikka Kallio",
+  "jobTitle": "Koulutettu hieroja",
+  "url": "https://data.laatuhieronta.fi/riikka-kallio/",
+  "worksFor": {
+    "@id": "https://data.laatuhieronta.fi/organization#org"
+  },
+  "creatorOf": {
+    "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset"
+  },
+  "sameAs": [
+    "https://www.ruutu.fi/video/2708263",
+    "https://www.hs.fi/urheilu/art-2000002893098.html",
+    "https://helsinkiwolverines.com/2022/05/14/riikka-kallio-tauolta-wolverinesiin/"
+  ]
+}

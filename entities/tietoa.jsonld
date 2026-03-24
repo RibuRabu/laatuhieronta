@@ -1,0 +1,20 @@
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://data.laatuhieronta.fi/tietoa#page",
+  "url": "https://laatuhieronta.fi/tietoa",
+  "name": "Tietoa",
+  "inLanguage": "fi",
+  "isPartOf": {
+    "@id": "https://data.laatuhieronta.fi/website#site"
+  },
+  "about": {
+    "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset"
+  },
+  "author": {
+    "@id": "https://data.laatuhieronta.fi/riikka-kallio#person"
+  },
+  "publisher": {
+    "@id": "https://data.laatuhieronta.fi/organization#org"
+  }
+}

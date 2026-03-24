@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://data.laatuhieronta.fi/omavalvonta-koulutettu-hieroja#article",
+  "url": "https://laatuhieronta.fi/omavalvonta-koulutettu-hieroja",
+  "name": "Omavalvonta koulutetulle hierojalle",
+  "inLanguage": "fi",
+  "isPartOf": {
+    "@id": "https://data.laatuhieronta.fi/website#site"
+  },
+  "about": [
+    {
+      "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset"
+    },
+    {
+      "@type": "Thing",
+      "name": "Omavalvonta"
+    },
+    {
+      "@type": "Thing",
+      "name": "Koulutettu hieroja"
+    }
+  ],
+  "author": {
+    "@id": "https://data.laatuhieronta.fi/riikka-kallio#person"
+  },
+  "publisher": {
+    "@id": "https://data.laatuhieronta.fi/organization#org"
+  }
+}

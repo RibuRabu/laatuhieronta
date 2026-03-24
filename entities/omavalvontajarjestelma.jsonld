@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://data.laatuhieronta.fi/omavalvontajarjestelma#page",
+      "url": "https://laatuhieronta.fi/omavalvontajarjestelma",
+      "name": "Omavalvontajärjestelmä",
+      "inLanguage": "fi",
+      "isPartOf": {
+        "@id": "https://data.laatuhieronta.fi/website#site"
+      },
+      "about": {
+        "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset"
+      },
+      "author": {
+        "@id": "https://data.laatuhieronta.fi/riikka-kallio#person"
+      },
+      "publisher": {
+        "@id": "https://data.laatuhieronta.fi/organization#org"
+      },
+      "mainEntity": {
+        "@id": "https://data.laatuhieronta.fi/omavalvontajarjestelma#product"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://data.laatuhieronta.fi/omavalvontajarjestelma#product",
+      "name": "Omavalvontajärjestelmä",
+      "description": "Laatuhieronta-frameworkin tuoteversio koulutetulle hierojalle. Kokonaisuus on suunniteltu jäsentämään omavalvontaa, vastuun kohdentumista ja dokumentoinnin rakennetta ilman että se itsessään tulkitsee lakia tai lupaa sääntelymukaisuutta.",
+      "brand": {
+        "@id": "https://data.laatuhieronta.fi/organization#org"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Koulutettu hieroja"
+      },
+      "isRelatedTo": {
+        "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Tuotetyyppi",
+          "value": "Laatuhieronta-frameworkin tuoteversio"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "NFC-yhteensopivuus",
+          "value": "Tuotteeseen voidaan liittää NFC-siru avaamaan digitaalinen sisältö tai käyttöliittymä."
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://holvi.com/shop/vinokasvi/product/19a59b12dfd7658fbb6f0859611d3b1b/",
+        "price": "299",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ]
+}
