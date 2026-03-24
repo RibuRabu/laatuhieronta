@@ -6,14 +6,6 @@
   <title>Milloin omavalvontaa päivitetään</title>
   <link rel="canonical" href="https://laatuhieronta.fi/omavalvonta/paivittaminen/">
   <link rel="stylesheet" href="../../style.css">
-
-  <script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "w0wltett9e");
-  </script>
 </head>
 <body>
 
@@ -140,6 +132,87 @@
   </p>
 
 </main>
+
+<p style="margin:16px 0 0;font-size:13px;">
+  <a href="#" id="analytics-reset">Muuta analytiikkavalintaa</a>
+</p>
+
+<div id="analytics-consent" style="display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:480px;margin:0 auto;padding:12px 14px;border:1px solid #d4d4d4;border-radius:10px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.12);font:14px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#111;">
+  <strong style="display:block;margin:0 0 6px;">Analytiikka</strong>
+  <p style="margin:0 0 10px;">Tällä sivustolla voidaan käyttää kevyttä analytiikkaa käytön ymmärtämiseen ja hankintapolun parantamiseen.</p>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;">
+    <button id="analytics-accept" type="button" style="border:0;border-radius:8px;padding:8px 10px;background:#111;color:#fff;cursor:pointer;">Hyväksy analytiikka</button>
+    <button id="analytics-decline" type="button" style="border:1px solid #b9b9b9;border-radius:8px;padding:8px 10px;background:#fff;color:#111;cursor:pointer;">Jatka ilman analytiikkaa</button>
+  </div>
+</div>
+<script type="text/javascript">
+(function(){
+  var resetLink = document.getElementById("analytics-reset");
+  if (!resetLink) return;
+
+  resetLink.addEventListener("click", function(event) {
+    event.preventDefault();
+    try { localStorage.removeItem("lh_analytics_consent"); }
+    catch (e) {}
+
+    var box = document.getElementById("analytics-consent");
+    if (box) box.style.display = "block";
+  });
+})();
+</script>
+
+<script type="text/javascript">
+(function(){
+  var consentKey = "lh_analytics_consent";
+
+  function loadClarity() {
+    if (window.__clarityLoaded) return;
+    window.__clarityLoaded = true;
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w0wltett9e");
+  }
+
+  function getConsent() {
+    try { return localStorage.getItem(consentKey); }
+    catch (e) { return null; }
+  }
+
+  function setConsent(value) {
+    try { localStorage.setItem(consentKey, value); }
+    catch (e) {}
+  }
+
+  var consent = getConsent();
+  if (consent === "accepted") {
+    loadClarity();
+    return;
+  }
+  if (consent === "declined") {
+    return;
+  }
+
+  var box = document.getElementById("analytics-consent");
+  var acceptBtn = document.getElementById("analytics-accept");
+  var declineBtn = document.getElementById("analytics-decline");
+  if (!box || !acceptBtn || !declineBtn) return;
+
+  box.style.display = "block";
+
+  acceptBtn.addEventListener("click", function() {
+    setConsent("accepted");
+    loadClarity();
+    box.style.display = "none";
+  });
+
+  declineBtn.addEventListener("click", function() {
+    setConsent("declined");
+    box.style.display = "none";
+  });
+})();
+</script>
 
 </body>
 </html>
