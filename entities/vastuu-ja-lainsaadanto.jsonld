@@ -1,16 +1,16 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "@id": "https://data.laatuhieronta.fi/vastuu-ja-lainsaadanto#article",
+  "@id": "https://laatuhieronta.fi/vastuu-ja-lainsaadanto#article",
   "url": "https://laatuhieronta.fi/vastuu-ja-lainsaadanto",
   "name": "Vastuu ja lainsäädäntö",
   "inLanguage": "fi",
   "isPartOf": {
-    "@id": "https://data.laatuhieronta.fi/website#site"
+    "@id": "https://laatuhieronta.fi/#website"
   },
   "about": [
     {
-      "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset"
+      "@id": "https://laatuhieronta.fi/laatuhieronta#termset"
     },
     {
       "@type": "Thing",
@@ -26,12 +26,12 @@
     }
   ],
   "author": {
-    "@id": "https://data.laatuhieronta.fi/riikka-kallio#person"
+    "@id": "https://laatuhieronta.fi/riikka-kallio/#person"
   },
   "publisher": {
-    "@id": "https://data.laatuhieronta.fi/organization#org"
+    "@id": "https://laatuhieronta.fi/#organization"
   },
   "citation": {
-    "@id": "https://data.laatuhieronta.fi/lainsaadanto-viitteet#page"
+    "@id": "https://laatuhieronta.fi/lainsaadanto-viitteet#page"
   }
 }

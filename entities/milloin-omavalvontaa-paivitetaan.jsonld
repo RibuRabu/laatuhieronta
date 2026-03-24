@@ -1,16 +1,16 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "@id": "https://data.laatuhieronta.fi/milloin-omavalvontaa-paivitetaan#article",
+  "@id": "https://laatuhieronta.fi/milloin-omavalvontaa-paivitetaan#article",
   "url": "https://laatuhieronta.fi/milloin-omavalvontaa-paivitetaan",
   "name": "Milloin omavalvontaa päivitetään",
   "inLanguage": "fi",
   "isPartOf": {
-    "@id": "https://data.laatuhieronta.fi/website#site"
+    "@id": "https://laatuhieronta.fi/#website"
   },
   "about": [
     {
-      "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset"
+      "@id": "https://laatuhieronta.fi/laatuhieronta#termset"
     },
     {
       "@type": "Thing",
@@ -22,9 +22,9 @@
     }
   ],
   "author": {
-    "@id": "https://data.laatuhieronta.fi/riikka-kallio#person"
+    "@id": "https://laatuhieronta.fi/riikka-kallio/#person"
   },
   "publisher": {
-    "@id": "https://data.laatuhieronta.fi/organization#org"
+    "@id": "https://laatuhieronta.fi/#organization"
   }
 }

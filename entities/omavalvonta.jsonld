@@ -1,37 +1,37 @@
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "@id": "https://data.laatuhieronta.fi/omavalvonta#page",
+  "@id": "https://laatuhieronta.fi/omavalvonta#page",
   "url": "https://laatuhieronta.fi/omavalvonta",
   "name": "Omavalvonta",
   "inLanguage": "fi",
   "isPartOf": {
-    "@id": "https://data.laatuhieronta.fi/website#site"
+    "@id": "https://laatuhieronta.fi/#website"
   },
   "about": {
-    "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset"
+    "@id": "https://laatuhieronta.fi/laatuhieronta#termset"
   },
   "author": {
-    "@id": "https://data.laatuhieronta.fi/riikka-kallio#person"
+    "@id": "https://laatuhieronta.fi/riikka-kallio/#person"
   },
   "publisher": {
-    "@id": "https://data.laatuhieronta.fi/organization#org"
+    "@id": "https://laatuhieronta.fi/#organization"
   },
   "hasPart": [
     {
-      "@id": "https://data.laatuhieronta.fi/omavalvonta-koulutettu-hieroja#article"
+      "@id": "https://laatuhieronta.fi/omavalvonta-koulutettu-hieroja#article"
     },
     {
-      "@id": "https://data.laatuhieronta.fi/milloin-omavalvontaa-paivitetaan#article"
+      "@id": "https://laatuhieronta.fi/milloin-omavalvontaa-paivitetaan#article"
     },
     {
-      "@id": "https://data.laatuhieronta.fi/omavalvonta-ei-ole-raportointia#article"
+      "@id": "https://laatuhieronta.fi/omavalvonta-ei-ole-raportointia#article"
     },
     {
-      "@id": "https://data.laatuhieronta.fi/omavalvontajarjestelma#page"
+      "@id": "https://laatuhieronta.fi/omavalvonta/jarjestelma/#webpage"
     },
     {
-      "@id": "https://data.laatuhieronta.fi/laatuajattelu#article"
+      "@id": "https://laatuhieronta.fi/laatuajattelu#article"
     }
   ]
 }
