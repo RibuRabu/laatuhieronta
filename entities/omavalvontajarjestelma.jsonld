@@ -3,60 +3,48 @@
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://data.laatuhieronta.fi/omavalvontajarjestelma#page",
-      "url": "https://laatuhieronta.fi/omavalvontajarjestelma",
-      "name": "Omavalvontajärjestelmä",
+      "@id": "https://laatuhieronta.fi/omavalvonta/jarjestelma/#webpage",
+      "url": "https://laatuhieronta.fi/omavalvonta/jarjestelma/",
+      "name": "Omavalvontajärjestelmä koulutetulle hierojalle",
       "inLanguage": "fi",
       "isPartOf": {
-        "@id": "https://data.laatuhieronta.fi/website#site"
+        "@id": "https://laatuhieronta.fi/#website"
       },
       "about": {
-        "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset"
-      },
-      "author": {
-        "@id": "https://data.laatuhieronta.fi/riikka-kallio#person"
+        "@id": "https://laatuhieronta.fi/#organization"
       },
       "publisher": {
-        "@id": "https://data.laatuhieronta.fi/organization#org"
+        "@id": "https://laatuhieronta.fi/#organization"
       },
       "mainEntity": {
-        "@id": "https://data.laatuhieronta.fi/omavalvontajarjestelma#product"
+        "@id": "https://laatuhieronta.fi/omavalvonta/jarjestelma/#product"
       }
     },
     {
       "@type": "Product",
-      "@id": "https://data.laatuhieronta.fi/omavalvontajarjestelma#product",
+      "@id": "https://laatuhieronta.fi/omavalvonta/jarjestelma/#product",
       "name": "Omavalvontajärjestelmä",
-      "description": "Laatuhieronta-frameworkin tuoteversio koulutetulle hierojalle. Kokonaisuus on suunniteltu jäsentämään omavalvontaa, vastuun kohdentumista ja dokumentoinnin rakennetta ilman että se itsessään tulkitsee lakia tai lupaa sääntelymukaisuutta.",
+      "description": "Omavalvonnan dokumentointirakenne koulutetulle hierojalle. Kokonaisuus jäsentää vastuun kohdentumista, kirjaamisen periaatteita ja toiminnan rakenteita.",
+      "url": "https://laatuhieronta.fi/omavalvonta/jarjestelma/",
       "brand": {
-        "@id": "https://data.laatuhieronta.fi/organization#org"
+        "@id": "https://laatuhieronta.fi/#organization"
       },
       "audience": {
         "@type": "Audience",
         "audienceType": "Koulutettu hieroja"
       },
-      "isRelatedTo": {
-        "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset"
-      },
       "additionalProperty": [
         {
           "@type": "PropertyValue",
           "name": "Tuotetyyppi",
-          "value": "Laatuhieronta-frameworkin tuoteversio"
+          "value": "Omavalvonnan dokumentointirakenne"
         },
         {
           "@type": "PropertyValue",
           "name": "NFC-yhteensopivuus",
-          "value": "Tuotteeseen voidaan liittää NFC-siru avaamaan digitaalinen sisältö tai käyttöliittymä."
+          "value": "Rakenteeseen voidaan liittää NFC-tunniste käytön ankkurointiin."
         }
-      ],
-      "offers": {
-        "@type": "Offer",
-        "url": "https://holvi.com/shop/vinokasvi/product/19a59b12dfd7658fbb6f0859611d3b1b/",
-        "price": "299",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock"
-      }
+      ]
     }
   ]
 }

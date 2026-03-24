@@ -1,12 +1,12 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://data.laatuhieronta.fi/organization#org",
+  "@id": "https://laatuhieronta.fi/#organization",
   "name": "Laatuhieronta",
   "url": "https://laatuhieronta.fi/",
-  "description": "Laatuhieronta on koulutetulle hierojalle suunnattu rakenteellinen kokonaisuus, joka jäsentää omavalvontaa, vastuuta, dokumentoinnin rakennetta ja laatuajattelua ilman lupauksia tai tulospuhetta.",
+  "description": "Laatuhieronta on koulutetulle hierojalle suunnattu rakenteellinen kokonaisuus, joka jäsentää omavalvontaa, vastuuta, dokumentoinnin rakennetta ja laatuajattelua.",
   "founder": {
-    "@id": "https://data.laatuhieronta.fi/riikka-kallio#person"
+    "@id": "https://laatuhieronta.fi/riikka-kallio/#person"
   },
   "knowsAbout": [
     "Omavalvonta",
