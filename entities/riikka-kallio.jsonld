@@ -1,15 +1,12 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://data.laatuhieronta.fi/riikka-kallio#person",
+  "@id": "https://laatuhieronta.fi/riikka-kallio/#person",
   "name": "Riikka Kallio",
   "jobTitle": "Koulutettu hieroja",
-  "url": "https://data.laatuhieronta.fi/riikka-kallio/",
+  "url": "https://laatuhieronta.fi/riikka-kallio/",
   "worksFor": {
-    "@id": "https://data.laatuhieronta.fi/organization#org"
-  },
-  "creatorOf": {
-    "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset"
+    "@id": "https://laatuhieronta.fi/#organization"
   },
   "sameAs": [
     "https://www.ruutu.fi/video/2708263",
