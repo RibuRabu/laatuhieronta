@@ -1,14 +1,14 @@
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "@id": "https://data.laatuhieronta.fi/lainsaadanto-viitteet#page",
+  "@id": "https://laatuhieronta.fi/lainsaadanto-viitteet#page",
   "name": "Koulutetun hierojan lakivelvoitteet - viitekooste",
   "url": "https://ring-slicer-551.notion.site/Koulutetun-hierojan-lakivelvoitteet-2d71ae717c9b80e7964ee43037350528?pvs=74",
   "inLanguage": "fi",
   "description": "Kooste koulutetun hierojan keskeisistä lakivelvoitteista ja tietosuojavaatimuksista. Sivun tarkoitus on toimia viiteaineistona, joka tukee vastuun, lainsäädännön ja omavalvonnan rakenteellista ymmärtämistä.",
   "about": [
     {
-      "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset"
+      "@id": "https://laatuhieronta.fi/laatuhieronta#termset"
     },
     {
       "@type": "Thing",
@@ -44,7 +44,7 @@
     }
   ],
   "publisher": {
-    "@id": "https://data.laatuhieronta.fi/organization#org"
+    "@id": "https://laatuhieronta.fi/#organization"
   },
   "isBasedOn": [
     {

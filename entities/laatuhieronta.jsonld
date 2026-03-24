@@ -1,43 +1,43 @@
 {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
-  "@id": "https://data.laatuhieronta.fi/laatuhieronta#termset",
+  "@id": "https://laatuhieronta.fi/laatuhieronta#termset",
   "name": "Laatuhieronta",
   "url": "https://laatuhieronta.fi/",
   "description": "Laatuhieronta on koulutetun hierojan omavalvonnan jäsentämiseen tarkoitettu rakenteellinen ajattelukehys. Se tekee näkyväksi vastuun, velvoitteiden jäsentymisen ja dokumentoinnin rakenteen ilman että se itsessään tulkitsee lakia tai lupaa sääntelymukaisuutta.",
   "inLanguage": "fi",
   "creator": {
-    "@id": "https://data.laatuhieronta.fi/riikka-kallio#person"
+    "@id": "https://laatuhieronta.fi/riikka-kallio/#person"
   },
   "hasDefinedTerm": [
     {
       "@type": "DefinedTerm",
-      "@id": "https://data.laatuhieronta.fi/omavalvonta#term",
+      "@id": "https://laatuhieronta.fi/omavalvonta#term",
       "name": "Omavalvonta"
     },
     {
       "@type": "DefinedTerm",
-      "@id": "https://data.laatuhieronta.fi/laatuajattelu#term",
+      "@id": "https://laatuhieronta.fi/laatuajattelu#term",
       "name": "Laatuajattelu"
     },
     {
       "@type": "DefinedTerm",
-      "@id": "https://data.laatuhieronta.fi/ylidokumentointi-hieronnassa#term",
+      "@id": "https://laatuhieronta.fi/ylidokumentointi-hieronnassa#term",
       "name": "Ylidokumentointi hieronnassa"
     },
     {
       "@type": "DefinedTerm",
-      "@id": "https://data.laatuhieronta.fi/vastuu-ja-lainsaadanto#term",
+      "@id": "https://laatuhieronta.fi/vastuu-ja-lainsaadanto#term",
       "name": "Vastuu ja lainsäädäntö"
     },
     {
       "@type": "DefinedTerm",
-      "@id": "https://data.laatuhieronta.fi/omavalvonta-ei-ole-raportointia#term",
+      "@id": "https://laatuhieronta.fi/omavalvonta-ei-ole-raportointia#term",
       "name": "Omavalvonta ei ole raportointia"
     },
     {
       "@type": "DefinedTerm",
-      "@id": "https://data.laatuhieronta.fi/milloin-omavalvontaa-paivitetaan#term",
+      "@id": "https://laatuhieronta.fi/milloin-omavalvontaa-paivitetaan#term",
       "name": "Milloin omavalvontaa päivitetään"
     }
   ]
