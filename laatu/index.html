@@ -158,74 +158,7 @@
     <button id="analytics-decline" type="button" style="border:1px solid #b9b9b9;border-radius:8px;padding:8px 10px;background:#fff;color:#111;cursor:pointer;">Jatka ilman analytiikkaa</button>
   </div>
 </div>
-<script type="text/javascript">
-(function(){
-  var resetLink = document.getElementById("analytics-reset");
-  if (!resetLink) return;
-
-  resetLink.addEventListener("click", function(event) {
-    event.preventDefault();
-    try { localStorage.removeItem("lh_analytics_consent"); }
-    catch (e) {}
-
-    var box = document.getElementById("analytics-consent");
-    if (box) box.style.display = "block";
-  });
-})();
-</script>
-
-<script type="text/javascript">
-(function(){
-  var consentKey = "lh_analytics_consent";
-
-  function loadClarity() {
-    if (window.__clarityLoaded) return;
-    window.__clarityLoaded = true;
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w0wltett9e");
-  }
-
-  function getConsent() {
-    try { return localStorage.getItem(consentKey); }
-    catch (e) { return null; }
-  }
-
-  function setConsent(value) {
-    try { localStorage.setItem(consentKey, value); }
-    catch (e) {}
-  }
-
-  var consent = getConsent();
-  if (consent === "accepted") {
-    loadClarity();
-    return;
-  }
-  if (consent === "declined") {
-    return;
-  }
-
-  var box = document.getElementById("analytics-consent");
-  var acceptBtn = document.getElementById("analytics-accept");
-  var declineBtn = document.getElementById("analytics-decline");
-  if (!box || !acceptBtn || !declineBtn) return;
-
-  box.style.display = "block";
-
-  acceptBtn.addEventListener("click", function() {
-    setConsent("accepted");
-    loadClarity();
-    box.style.display = "none";
-  });
-
-  declineBtn.addEventListener("click", function() {
-    setConsent("declined");
-    box.style.display = "none";
-  });
-})();
-</script>
+<script src="/assets/analytics-consent.js" defer></script>
 
 </body>
 </html>
