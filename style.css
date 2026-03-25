@@ -45,8 +45,8 @@ body::before {
     radial-gradient(circle at 84% 76%, rgba(120, 120, 120, 0.14), transparent 22%),
     radial-gradient(circle at 12% 64%, rgba(0, 0, 0, 0.06), transparent 18%),
     radial-gradient(circle at 64% 52%, rgba(0, 0, 0, 0.05), transparent 30%);
-  filter: blur(22px);
-  opacity: 0.9;
+  filter: blur(8px);
+  opacity: 0.85;
 }
 
 main {
@@ -206,7 +206,4 @@ blockquote {
     padding: 32px 20px;
   }
 
-  h2 {
-    margin-top: 2.4rem;
-  }
 }
