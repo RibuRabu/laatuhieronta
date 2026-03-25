@@ -151,6 +151,21 @@ nav a:focus-visible {
   opacity: 1;
 }
 
+.subnav-block {
+  margin: 1.5rem 0;
+}
+
+.subnav-block p {
+  margin: 0 0 0.55rem;
+  font-size: 1.15rem;
+}
+
+.subnav-block ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+}
+
 blockquote {
   margin-left: 0;
   padding: 1rem 1.25rem;
