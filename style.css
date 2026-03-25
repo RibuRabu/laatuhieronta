@@ -28,23 +28,37 @@ body {
   line-height: 1.75;
   color: var(--text-main);
   padding: 24px 16px;
+  background: #f1f2f4;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
   background:
-    radial-gradient(circle at 18% 22%, rgba(122, 92, 255, 0.12), transparent 28%),
-    radial-gradient(circle at 78% 30%, rgba(30, 174, 152, 0.10), transparent 30%),
-    radial-gradient(circle at 32% 78%, rgba(80, 110, 210, 0.10), transparent 26%),
-    radial-gradient(circle at 84% 76%, rgba(120, 120, 120, 0.08), transparent 24%),
-    radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.035), transparent 55%),
-    #f3f4f6;
+    radial-gradient(circle at 18% 22%, rgba(122, 92, 255, 0.20), transparent 22%),
+    radial-gradient(circle at 78% 30%, rgba(30, 174, 152, 0.18), transparent 24%),
+    radial-gradient(circle at 32% 78%, rgba(80, 110, 210, 0.16), transparent 20%),
+    radial-gradient(circle at 84% 76%, rgba(120, 120, 120, 0.14), transparent 22%),
+    radial-gradient(circle at 12% 64%, rgba(0, 0, 0, 0.06), transparent 18%),
+    radial-gradient(circle at 64% 52%, rgba(0, 0, 0, 0.05), transparent 30%);
+  filter: blur(22px);
+  opacity: 0.9;
 }
 
 main {
+  position: relative;
+  z-index: 1;
   width: min(100%, var(--content-width));
   margin: 0 auto;
   padding: 48px 40px;
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.58);
   border-radius: var(--radius-lg);
-  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+  box-shadow: 0 12px 32px rgba(17, 24, 39, 0.10);
 }
 
 main > *:first-child {
@@ -181,6 +195,11 @@ blockquote {
 @media (max-width: 640px) {
   body {
     padding: 20px 12px;
+  }
+
+  body::before {
+    filter: blur(18px);
+    opacity: 0.85;
   }
 
   main {
