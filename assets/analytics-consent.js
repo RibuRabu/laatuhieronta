@@ -1,6 +1,6 @@
 (function () {
   var consentKey = "lh_analytics_consent";
-  var clarityProjectId = "w0wltett9e";
+  var clarityProjectId = "w0w1tett9e";
 
   function getMemoryConsent() {
     return window.__analyticsConsent || null;
