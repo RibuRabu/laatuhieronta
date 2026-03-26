@@ -1,14 +1,14 @@
 :root {
   color-scheme: light;
-  --page-bg: #f3f2f6;
-  --card-bg: rgba(255, 255, 255, 0.68);
-  --card-border: rgba(255, 255, 255, 0.52);
+  --page-bg: #f7f7f7;
+  --card-bg: rgba(255, 255, 255, 0.82);
+  --card-border: rgba(255, 255, 255, 0.6);
   --text-main: #2f2f2f;
   --text-muted: #3d3d3d;
   --heading-main: #1f1f1f;
   --heading-sub: #262626;
   --link-color: #39556f;
-  --shadow-soft: 0 12px 32px rgba(17, 24, 39, 0.10);
+  --shadow-soft: 0 14px 40px rgba(17, 24, 39, 0.12);
   --radius-lg: 10px;
   --content-width: 50rem;
 }
@@ -25,27 +25,33 @@ body {
   margin: 0;
   min-height: 100vh;
   position: relative;
-  padding: 24px;
+  padding: 28px;
+
+  /* MARMORI */
   background:
-    radial-gradient(circle at 18% 22%, rgba(198, 188, 228, 0.78), transparent 34%),
-    radial-gradient(circle at 78% 30%, rgba(187, 215, 212, 0.72), transparent 36%),
-    radial-gradient(circle at 52% 78%, rgba(220, 210, 236, 0.62), transparent 32%),
-    linear-gradient(180deg, #f3f2f6 0%, #edf1f2 100%);
+    radial-gradient(circle at 18% 22%, rgba(190, 180, 235, 0.85), transparent 34%),
+    radial-gradient(circle at 78% 30%, rgba(175, 210, 205, 0.75), transparent 36%),
+    radial-gradient(circle at 52% 78%, rgba(215, 200, 235, 0.7), transparent 32%),
+    radial-gradient(circle at 30% 70%, rgba(240, 240, 250, 0.6), transparent 40%),
+    linear-gradient(180deg, #f2f2f5 0%, #e9eef0 100%);
+
   background-attachment: fixed;
   color: var(--text-main);
 }
 
-/* Marmoroitu lisäkerros */
+/* marmorin “syvyys” */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
+
   background:
-    radial-gradient(circle at 24% 32%, rgba(255, 255, 255, 0.26), transparent 16%),
-    radial-gradient(circle at 64% 54%, rgba(255, 255, 255, 0.18), transparent 20%),
-    radial-gradient(circle at 46% 16%, rgba(205, 205, 218, 0.16), transparent 14%),
-    radial-gradient(circle at 82% 76%, rgba(255, 255, 255, 0.12), transparent 18%);
+    radial-gradient(circle at 25% 35%, rgba(255,255,255,0.35), transparent 18%),
+    radial-gradient(circle at 65% 55%, rgba(255,255,255,0.22), transparent 22%),
+    radial-gradient(circle at 45% 15%, rgba(200,200,220,0.18), transparent 16%),
+    radial-gradient(circle at 85% 75%, rgba(255,255,255,0.15), transparent 20%);
+
   opacity: 1;
   z-index: 0;
 }
@@ -53,10 +59,15 @@ body::before {
 main {
   position: relative;
   z-index: 1;
+
   width: min(100%, var(--content-width));
   margin: 0 auto;
   padding: 48px 40px;
+
+  /* EI enää täysin valkoinen blokki */
   background: var(--card-bg);
+  backdrop-filter: blur(6px);
+
   border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
@@ -70,7 +81,6 @@ main > *:last-child {
   margin-bottom: 0;
 }
 
-/* Logo */
 .site-logo {
   display: inline-block;
   margin-bottom: 0;
@@ -82,7 +92,6 @@ main > *:last-child {
   margin-bottom: 24px;
 }
 
-/* Typografia */
 h1,
 h2,
 p,
@@ -145,7 +154,6 @@ strong {
   color: var(--text-main);
 }
 
-/* Linkit */
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -157,7 +165,6 @@ a:focus-visible {
   text-decoration: underline;
 }
 
-/* Navigaatio */
 nav p {
   margin-bottom: 1.25rem;
 }
@@ -172,7 +179,6 @@ nav a:focus-visible {
   opacity: 1;
 }
 
-/* Subnav */
 .subnav-block {
   margin: 1.5rem 0;
 }
@@ -188,7 +194,6 @@ nav a:focus-visible {
   font-size: 0.95rem;
 }
 
-/* Blockquote */
 blockquote {
   margin-left: 0;
   padding: 1rem 1.25rem;
@@ -197,10 +202,9 @@ blockquote {
   border-radius: 0 8px 8px 0;
 }
 
-/* Mobile */
 @media (max-width: 640px) {
   body {
-    padding: 16px;
+    padding: 18px;
   }
 
   main {
