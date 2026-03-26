@@ -1,16 +1,15 @@
-
 :root {
   color-scheme: light;
-  --page-bg: #f7f7f7;
-  --card-bg: #fbfbfb;
-  --card-border: #ececec;
+  --page-bg: #f3f2f6;
+  --card-bg: rgba(255, 255, 255, 0.68);
+  --card-border: rgba(255, 255, 255, 0.52);
   --text-main: #2f2f2f;
   --text-muted: #3d3d3d;
   --heading-main: #1f1f1f;
   --heading-sub: #262626;
   --link-color: #39556f;
-  --shadow-soft: 0 8px 24px rgba(17, 24, 39, 0.06);
-  --radius-lg: 8px;
+  --shadow-soft: 0 12px 32px rgba(17, 24, 39, 0.10);
+  --radius-lg: 10px;
   --content-width: 50rem;
 }
 
@@ -26,34 +25,41 @@ body {
   margin: 0;
   min-height: 100vh;
   position: relative;
+  padding: 24px;
   background:
-    radial-gradient(circle at 18% 22%, rgba(214, 208, 232, 0.55), transparent 32%),
-    radial-gradient(circle at 78% 30%, rgba(205, 223, 221, 0.5), transparent 34%),
-    radial-gradient(circle at 52% 78%, rgba(226, 221, 236, 0.42), transparent 30%),
-    linear-gradient(180deg, #f4f4f6 0%, #eef1f2 100%);
+    radial-gradient(circle at 18% 22%, rgba(198, 188, 228, 0.78), transparent 34%),
+    radial-gradient(circle at 78% 30%, rgba(187, 215, 212, 0.72), transparent 36%),
+    radial-gradient(circle at 52% 78%, rgba(220, 210, 236, 0.62), transparent 32%),
+    linear-gradient(180deg, #f3f2f6 0%, #edf1f2 100%);
   background-attachment: fixed;
   color: var(--text-main);
 }
+
+/* Marmoroitu lisäkerros */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 28% 38%, rgba(255, 255, 255, 0.2), transparent 18%),
-    radial-gradient(circle at 62% 58%, rgba(255, 255, 255, 0.14), transparent 22%),
-    radial-gradient(circle at 44% 18%, rgba(210, 210, 220, 0.12), transparent 16%);
-  opacity: 0.9;
+    radial-gradient(circle at 24% 32%, rgba(255, 255, 255, 0.26), transparent 16%),
+    radial-gradient(circle at 64% 54%, rgba(255, 255, 255, 0.18), transparent 20%),
+    radial-gradient(circle at 46% 16%, rgba(205, 205, 218, 0.16), transparent 14%),
+    radial-gradient(circle at 82% 76%, rgba(255, 255, 255, 0.12), transparent 18%);
+  opacity: 1;
   z-index: 0;
 }
+
 main {
+  position: relative;
+  z-index: 1;
   width: min(100%, var(--content-width));
   margin: 0 auto;
   padding: 48px 40px;
-  background: rgba(255, 255, 255, 0.76);
-  border: 1px solid rgba(255, 255, 255, 0.58);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 12px 32px rgba(17, 24, 39, 0.10);
+  box-shadow: var(--shadow-soft);
 }
 
 main > *:first-child {
@@ -64,6 +70,7 @@ main > *:last-child {
   margin-bottom: 0;
 }
 
+/* Logo */
 .site-logo {
   display: inline-block;
   margin-bottom: 0;
@@ -75,6 +82,7 @@ main > *:last-child {
   margin-bottom: 24px;
 }
 
+/* Typografia */
 h1,
 h2,
 p,
@@ -96,9 +104,7 @@ h3 {
 h1 {
   margin-bottom: 24px;
   font-size: clamp(2.5rem, 6vw, 3rem);
-  line-height: 1.2;
   letter-spacing: -0.5px;
-  font-weight: 700;
   color: var(--heading-main);
 }
 
@@ -139,6 +145,7 @@ strong {
   color: var(--text-main);
 }
 
+/* Linkit */
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -150,6 +157,7 @@ a:focus-visible {
   text-decoration: underline;
 }
 
+/* Navigaatio */
 nav p {
   margin-bottom: 1.25rem;
 }
@@ -164,6 +172,7 @@ nav a:focus-visible {
   opacity: 1;
 }
 
+/* Subnav */
 .subnav-block {
   margin: 1.5rem 0;
 }
@@ -179,6 +188,7 @@ nav a:focus-visible {
   font-size: 0.95rem;
 }
 
+/* Blockquote */
 blockquote {
   margin-left: 0;
   padding: 1rem 1.25rem;
@@ -187,9 +197,10 @@ blockquote {
   border-radius: 0 8px 8px 0;
 }
 
+/* Mobile */
 @media (max-width: 640px) {
   body {
-    padding: 20px 12px;
+    padding: 16px;
   }
 
   main {
