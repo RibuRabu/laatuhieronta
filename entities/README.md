@@ -8,9 +8,12 @@ It defines structured entities using JSON-LD aligned with schema.org standards.
 
 ## What this repository is
 
-This is not an application.
+This repository contains:
 
-This repository serves as a **semantic data layer** describing:
+- a static website implementation (HTML/CSS and related assets)
+- a semantic data layer under `/entities` described in JSON-LD
+
+The `/entities` directory serves as a **semantic data layer** describing:
 
 - the organization entity  
 - the operational system entity  
@@ -18,7 +21,7 @@ This repository serves as a **semantic data layer** describing:
 - regulatory context entities  
 - page-level semantic definitions  
 
-All data is provided in JSON-LD format for machine readability.
+Entity data is provided in JSON-LD format for machine readability.
 
 ---
 
@@ -39,6 +42,11 @@ It acts as a canonical reference layer for the system’s identity and structure
 
 ## Structure Overview
 
+### Website layer
+
+Top-level files and folders contain the public website pages and assets
+(for example `index.html`, section pages, `style.css`, `sitemap.xml`, and `robots.txt`).
+
 ### Core Entities
 
 `/entities/organization.jsonld`  
@@ -47,14 +55,15 @@ Defines the organization entity.
 `/entities/website.jsonld`  
 Defines the website entity.
 
-`/entities/solution-omavalvontajarjestelma.jsonld`  
+`/entities/omavalvontajarjestelma.jsonld`  
 Defines the operational compliance system entity.
 
 ---
 
 ### Page Entities
 
-`/entities/page-*.jsonld`
+`/entities/*.jsonld` page-specific entity files (for example:
+`omavalvonta.jsonld`, `vastuu-ja-lainsaadanto.jsonld`, `tietoa.jsonld`, `riikka-kallio.jsonld`)
 
 Each page entity describes:
 
@@ -106,16 +115,11 @@ This repository represents the underlying semantic structure that describes it.
 
 ## Repository Scope
 
-This repository intentionally contains only:
+This repository includes:
 
-- JSON-LD entity definitions  
-- minimal structural documentation  
-
-It does **not** include:
-
-- application code  
-- business logic  
-- UI components  
+- static website files and assets  
+- JSON-LD entity definitions under `/entities`  
+- structural documentation  
 
 ---
 
