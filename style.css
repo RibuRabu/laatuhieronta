@@ -202,6 +202,48 @@ blockquote {
   border-radius: 0 8px 8px 0;
 }
 
+.self-check-block {
+  margin: 2.25rem 0;
+  padding: 1.2rem 1.2rem 0.35rem;
+  max-width: 42rem;
+  border: 1px solid #d2d8df;
+  border-radius: 10px;
+  background: rgba(245, 247, 250, 0.9);
+}
+
+.self-check-block h2 {
+  margin-top: 0;
+}
+
+.self-check-form fieldset {
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+}
+
+.self-check-form legend {
+  margin-bottom: 0.55rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.self-check-form label {
+  display: block;
+  margin: 0 0 0.55rem;
+  color: var(--text-muted);
+}
+
+.self-check-form input[type="checkbox"] {
+  margin-right: 0.45rem;
+}
+
+.self-check-result {
+  padding: 0.75rem 0.85rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #d9dee5;
+}
+
 @media (max-width: 640px) {
   body {
     padding: 18px;
