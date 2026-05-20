@@ -45,21 +45,39 @@ main {
 main > *:first-child { margin-top: 0; }
 main > *:last-child  { margin-bottom: 0; }
 
-/* LOGO */
-.site-logo { display: inline-block; margin-bottom: 0; }
-.site-logo img { max-width: 140px; height: auto; margin-bottom: 24px; }
-
 /* NAV */
-nav { margin-bottom: 1.5rem; }
-nav p { margin-bottom: 0; font-size: 0.875rem; }
-nav a {
-  color: var(--muted);
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 0.875rem;
-  transition: color 0.15s;
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 28px;
 }
-nav a:hover { color: var(--purple); text-decoration: none; }
+.nav-in {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo { display: flex; align-items: center; text-decoration: none; }
+.nav-logo img { max-width: 110px; height: auto; display: block; }
+.nav-links {
+  display: flex; gap: 20px; list-style: none;
+  align-items: center; padding: 0; margin: 0;
+}
+.nav-links a {
+  color: var(--muted); font-size: 0.875rem; font-weight: 400;
+  text-decoration: none; transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--purple); text-decoration: none; }
+
+@media (max-width: 480px) {
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: 0.8rem; }
+}
 
 /* HEADINGS */
 h1 {
