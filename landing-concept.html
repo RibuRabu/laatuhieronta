@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omavalvontajärjestelmä – Rakenne joka kestää viranomaistarkastuksen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:          #f9f7ff;
+      --bg-card:     #eeebff;
+      --white:       #ffffff;
+      --purple:      #8c52ff;
+      --purple-dark: #7540e8;
+      --purple-tint: #f0ebff;
+      --teal:        #0cc0df;
+      --teal-tint:   #e6f9fd;
+      --cyan:        #5ce1e6;
+      --yellow:      #ffde59;
+      --grad-main:   linear-gradient(135deg, #8c52ff 0%, #5ce1e6 100%);
+      --grad-accent: linear-gradient(135deg, #0cc0df 0%, #ffde59 100%);
+      --text:        #19141f;
+      --muted:       #655b78;
+      --border:      #ddd6f8;
+      --radius:      4px;
+      --max:         1100px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ─────────────────────────────────── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(247,244,238,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+    }
+    .nav-inner {
+      max-width: var(--max); margin: 0 auto;
+      height: 60px; display: flex;
+      align-items: center; justify-content: space-between;
+    }
+    .nav-brand {
+      font-family: 'Fraunces', serif;
+      font-size: 1.05rem; font-weight: 500;
+      color: var(--purple); text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none;
+      font-size: 0.875rem; transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--grad-main) !important;
+      color: var(--white) !important;
+      padding: 8px 16px;
+      border-radius: var(--radius);
+      font-weight: 500 !important;
+      transition: opacity 0.15s !important;
+    }
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* ─── HERO ────────────────────────────────── */
+    .hero {
+      max-width: var(--max); margin: 0 auto;
+      padding: 88px 32px 72px;
+      display: grid;
+      grid-template-columns: 55% 1fr;
+      gap: 64px; align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 22px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block;
+      width: 24px; height: 1px; background: var(--teal);
+    }
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.5rem, 4.2vw, 3.8rem);
+      font-weight: 700; line-height: 1.06;
+      letter-spacing: -0.035em;
+      color: var(--text); margin-bottom: 24px;
+    }
+    .hero h1 em { color: var(--purple); font-style: italic; }
+    .hero-sub {
+      font-size: 1.05rem; color: var(--muted);
+      margin-bottom: 36px; line-height: 1.7;
+      max-width: 480px;
+    }
+    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--grad-main); color: var(--white);
+      padding: 13px 22px; border-radius: var(--radius);
+      font-weight: 500; font-size: 0.95rem;
+      text-decoration: none; transition: opacity 0.15s;
+    }
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--text);
+      padding: 13px 22px; border-radius: var(--radius);
+      border: 1px solid var(--border);
+      font-size: 0.95rem; text-decoration: none;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .btn-ghost:hover { border-color: var(--text); }
+
+    /* document mockup */
+    .doc-mockup {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px; padding: 28px;
+      box-shadow:
+        0 2px 8px rgba(0,0,0,0.05),
+        0 16px 48px rgba(0,0,0,0.08);
+      position: relative;
+    }
+    .doc-mockup::before {
+      content: '';
+      position: absolute; top: -1px; left: 32px; right: 32px; height: 3px;
+      background: var(--grad-main);
+      border-radius: 0 0 3px 3px;
+    }
+    .doc-top {
+      display: flex; align-items: center; gap: 6px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 18px;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; }
+    .dot-r { background: #FF7B7B; }
+    .dot-y { background: #FFD65E; }
+    .dot-g { background: #69D185; }
+    .doc-filename {
+      margin-left: auto;
+      font-size: 0.65rem; font-family: 'Courier New', monospace;
+      color: var(--muted);
+    }
+    .doc-eyebrow {
+      font-size: 0.62rem; font-weight: 700;
+      letter-spacing: 0.09em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 10px;
+    }
+    .doc-row {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 0; border-bottom: 1px solid var(--bg-card);
+    }
+    .doc-check-box {
+      width: 13px; height: 13px;
+      border-radius: 2px;
+      border: 1.5px solid var(--border);
+      flex-shrink: 0; transition: all 0.2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .doc-check-box.on {
+      background: var(--purple); border-color: var(--purple);
+    }
+    .doc-check-box.on::after {
+      content: '✓'; color: white; font-size: 8px; line-height: 1;
+    }
+    .doc-bar {
+      height: 7px; border-radius: 2px;
+      background: var(--bg-card); flex: 1;
+    }
+    .doc-bar.filled { background: #d4c5ff; }
+    .doc-bar.w80 { max-width: 80%; }
+    .doc-bar.w60 { max-width: 60%; }
+    .doc-footer {
+      margin-top: 20px; padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .doc-meta { font-size: 0.62rem; font-family: 'Courier New', monospace; color: var(--muted); }
+    .doc-badge {
+      background: var(--purple-tint);
+      color: var(--purple);
+      font-size: 0.6rem; font-weight: 700;
+      padding: 3px 8px; border-radius: 2px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+
+    /* ─── CREDIBILITY BAR ────────────────────── */
+    .cred-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+      padding: 20px 32px;
+    }
+    .cred-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; gap: 40px;
+      align-items: center; justify-content: center; flex-wrap: wrap;
+    }
+    .cred-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.83rem; color: var(--muted);
+    }
+    .cred-item strong { color: var(--text); font-weight: 500; }
+
+    /* ─── SECTIONS ───────────────────────────── */
+    section { padding: 88px 32px; }
+    .sec {
+      max-width: var(--max); margin: 0 auto;
+    }
+    .eyebrow {
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 14px;
+    }
+    .sec-title {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      font-weight: 700; letter-spacing: -0.03em;
+      line-height: 1.08; margin-bottom: 14px;
+    }
+    .sec-sub {
+      font-size: 1rem; color: var(--muted);
+      max-width: 540px; line-height: 1.7;
+    }
+
+    /* ─── PROBLEM ────────────────────────────── */
+    .problem-sec { background: var(--white); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px; margin-top: 52px; align-items: start;
+    }
+    .prob-list { list-style: none; }
+    .prob-item {
+      display: flex; gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .prob-item:first-child { border-top: 1px solid var(--border); }
+    .prob-n {
+      font-family: 'Fraunces', serif;
+      font-size: 1.1rem; font-weight: 300;
+      color: var(--teal); width: 28px; flex-shrink: 0;
+      padding-top: 1px;
+    }
+    .prob-body strong {
+      display: block; font-weight: 500;
+      font-size: 0.93rem; margin-bottom: 4px;
+    }
+    .prob-body span { font-size: 0.83rem; color: var(--muted); }
+
+    .solution-card {
+      background: var(--grad-main);
+      color: white; padding: 36px;
+      border-radius: 8px;
+    }
+    .solution-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.45rem; font-weight: 500;
+      line-height: 1.2; letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .solution-card p {
+      font-size: 0.875rem; opacity: 0.82;
+      line-height: 1.65; margin-bottom: 22px;
+    }
+    .sol-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .sol-features li {
+      display: flex; align-items: flex-start;
+      gap: 10px; font-size: 0.875rem; opacity: 0.92;
+    }
+    .sol-check {
+      width: 16px; height: 16px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center;
+      justify-content: center;
+      margin-top: 1px; font-size: 9px;
+    }
+
+    /* ─── WHO ────────────────────────────────── */
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px; overflow: hidden;
+      margin-top: 48px;
+    }
+    .who-card { background: var(--white); padding: 28px; }
+    .who-icon { font-size: 1.5rem; margin-bottom: 12px; }
+    .who-card h3 { font-weight: 600; font-size: 0.93rem; margin-bottom: 6px; }
+    .who-card p { font-size: 0.81rem; color: var(--muted); line-height: 1.55; }
+
+    /* not-for note */
+    .not-for {
+      margin-top: 28px; padding: 16px 20px;
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      border-left: 3px solid var(--border);
+      font-size: 0.83rem; color: var(--muted);
+    }
+    .not-for strong { color: var(--text); }
+
+    /* ─── SELF-CHECK ─────────────────────────── */
+    .check-sec {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .check-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px; margin-top: 48px; align-items: start;
+    }
+    .check-form { display: flex; flex-direction: column; }
+    .check-item {
+      display: flex; align-items: flex-start;
+      gap: 13px; padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+    }
+    .check-item:first-child { padding-top: 0; }
+    .check-item input[type="checkbox"] {
+      appearance: none; -webkit-appearance: none;
+      width: 17px; height: 17px;
+      border: 1.5px solid var(--border);
+      border-radius: 3px; flex-shrink: 0;
+      margin-top: 2px; cursor: pointer;
+      position: relative; transition: all 0.15s;
+    }
+    .check-item input[type="checkbox"]:checked {
+      background: var(--purple); border-color: var(--purple);
+    }
+    .check-item input[type="checkbox"]:checked::after {
+      content: '';
+      position: absolute; top: 2px; left: 5px;
+      width: 4px; height: 8px;
+      border: 1.5px solid white;
+      border-top: 0; border-left: 0;
+      transform: rotate(45deg);
+    }
+    .check-item label {
+      font-size: 0.875rem; line-height: 1.55;
+      color: var(--text); cursor: pointer;
+    }
+
+    /* score panel */
+    .score-panel { position: sticky; top: 80px; }
+    .score-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px; padding: 32px;
+    }
+    .ring-wrap { display: flex; justify-content: center; margin-bottom: 20px; }
+    .score-ring { position: relative; width: 110px; height: 110px; }
+    .score-ring svg { transform: rotate(-90deg); width: 110px; height: 110px; }
+    .score-ring circle { fill: none; stroke-width: 7; stroke-linecap: round; }
+    .ring-track { stroke: var(--bg-card); }
+    .ring-fill {
+      stroke: var(--purple);
+      stroke-dasharray: 254;
+      stroke-dashoffset: 254;
+      transition: stroke-dashoffset 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+                  stroke 0.3s ease;
+    }
+    .score-nums {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .score-big {
+      font-family: 'Fraunces', serif;
+      font-size: 2rem; font-weight: 700;
+      line-height: 1; color: var(--text);
+    }
+    .score-denom { font-size: 0.72rem; color: var(--muted); }
+    .score-label { text-align: center; margin-bottom: 18px; }
+    .score-label h3 { font-weight: 600; font-size: 0.95rem; margin-bottom: 3px; }
+    .score-label p { font-size: 0.81rem; color: var(--muted); }
+    .score-feedback {
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      font-size: 0.83rem; line-height: 1.55;
+      margin-bottom: 20px;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .score-feedback.st-low  { background: #FEF2F2; border-left: 3px solid #EF4444; }
+    .score-feedback.st-mid  { background: var(--teal-tint); border-left: 3px solid var(--teal); }
+    .score-feedback.st-good { background: var(--purple-tint); border-left: 3px solid var(--purple); }
+    .score-feedback.st-none { background: var(--bg-card); border-left: 3px solid var(--border); }
+    .score-cta {
+      display: block; text-align: center;
+      background: var(--grad-main); color: var(--white);
+      padding: 13px; border-radius: var(--radius);
+      font-weight: 500; font-size: 0.9rem;
+      text-decoration: none;
+      opacity: 0; transform: translateY(4px);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .score-cta.visible { opacity: 1; transform: translateY(0); }
+    .score-cta:hover { opacity: 0.88; }
+
+    /* ─── PRODUCT ────────────────────────────── */
+    .product-sec { background: var(--white); }
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px; margin-top: 52px; align-items: start;
+    }
+    .feat-list { list-style: none; }
+    .feat-item {
+      display: flex; gap: 14px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .feat-item:first-child { border-top: 1px solid var(--border); }
+    .feat-ico {
+      width: 30px; height: 30px;
+      background: var(--purple-tint);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 0.85rem; color: var(--purple);
+    }
+    .feat-text strong { display: block; font-size: 0.9rem; font-weight: 500; margin-bottom: 3px; }
+    .feat-text span { font-size: 0.81rem; color: var(--muted); }
+
+    /* pricing card */
+    .pricing-card {
+      border: 2px solid var(--purple);
+      border-radius: 8px; overflow: hidden;
+    }
+    .pricing-head {
+      background: var(--grad-main); color: white;
+      padding: 24px 28px;
+    }
+    .pricing-head h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.3rem; font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .pricing-head p { font-size: 0.81rem; opacity: 0.78; }
+    .pricing-body { padding: 24px 28px; }
+    .price-row {
+      display: flex; align-items: baseline; gap: 8px;
+      margin-bottom: 22px;
+    }
+    .price-amt {
+      font-family: 'Fraunces', serif;
+      font-size: 2.4rem; font-weight: 700; color: var(--text);
+    }
+    .price-note { font-size: 0.81rem; color: var(--muted); }
+    .incl-list { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
+    .incl-list li { display: flex; align-items: flex-start; gap: 9px; font-size: 0.875rem; }
+    .incl-check { color: var(--purple); font-weight: 700; flex-shrink: 0; }
+    .btn-buy {
+      display: block; text-align: center;
+      background: var(--grad-main); color: white;
+      padding: 15px; border-radius: var(--radius);
+      font-weight: 600; font-size: 0.93rem;
+      text-decoration: none; transition: opacity 0.15s;
+    }
+    .btn-buy:hover { opacity: 0.88; }
+    .pricing-demo {
+      margin-top: 14px; text-align: center;
+      font-size: 0.81rem; color: var(--muted);
+    }
+    .pricing-demo a { color: var(--purple); text-decoration: none; }
+    .pricing-demo a:hover { text-decoration: underline; }
+
+    /* ─── NFC ────────────────────────────────── */
+    .nfc-strip {
+      border-top: 1px solid var(--border);
+      padding: 48px 32px;
+      background: var(--bg);
+    }
+    .nfc-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; gap: 48px; align-items: center;
+      flex-wrap: wrap;
+    }
+    .nfc-icon-wrap {
+      width: 64px; height: 64px;
+      background: var(--purple-tint);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; flex-shrink: 0;
+    }
+    .nfc-text h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.2rem; font-weight: 500;
+      letter-spacing: -0.02em; margin-bottom: 6px;
+    }
+    .nfc-text p { font-size: 0.875rem; color: var(--muted); max-width: 480px; }
+
+    /* ─── FOOTER ─────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 36px 32px;
+    }
+    .foot-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: center; gap: 20px; flex-wrap: wrap;
+    }
+    .foot-brand {
+      font-family: 'Fraunces', serif;
+      font-size: 1rem; font-weight: 500;
+      color: var(--purple); text-decoration: none;
+    }
+    .foot-links { display: flex; gap: 24px; list-style: none; }
+    .foot-links a { font-size: 0.81rem; color: var(--muted); text-decoration: none; }
+    .foot-links a:hover { color: var(--text); }
+
+    /* ─── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 800px) {
+      .hero, .problem-grid, .check-layout, .product-grid {
+        grid-template-columns: 1fr; gap: 40px;
+      }
+      .who-grid { grid-template-columns: 1fr 1fr; }
+      .hero { padding: 56px 24px 48px; }
+      section { padding: 64px 24px; }
+      .score-panel { position: static; }
+      .nav-links li:not(:last-child) { display: none; }
+    }
+    @media (max-width: 480px) {
+      .who-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">Laatuhieronta</a>
+    <ul class="nav-links">
+      <li><a href="#mika-on">Mikä on</a></li>
+      <li><a href="#kenelle">Kenelle</a></li>
+      <li><a href="#testi">Testi</a></li>
+      <li><a href="#tuote">Tuote</a></li>
+      <li><a href="https://holvi.com/shop/vinokasvi/" class="nav-cta">Osta käyttöoikeus</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-copy">
+    <div class="hero-eyebrow">Omavalvontajärjestelmä</div>
+    <h1>Rakenne joka kestää<br><em>viranomaistarkastuksen</em></h1>
+    <p class="hero-sub">
+      Valmis dokumentointirakenne itsenäisille ammattilaisille palvelualalla.
+      Ei lisää velvoitteita — selkeyttää ne jotka jo on.
+    </p>
+    <div class="hero-actions">
+      <a href="#testi" class="btn-primary">Testaa omavalvontasi →</a>
+      <a href="#tuote" class="btn-ghost">Katso mitä saat</a>
+    </div>
+  </div>
+
+  <!-- Document mockup -->
+  <div class="doc-mockup">
+    <div class="doc-top">
+      <span class="dot dot-r"></span>
+      <span class="dot dot-y"></span>
+      <span class="dot dot-g"></span>
+      <span class="doc-filename">omavalvonta_2025.pdf</span>
+    </div>
+    <div class="doc-eyebrow">Omavalvontasuunnitelma</div>
+    <div class="doc-row">
+      <div class="doc-check-box on"></div>
+      <div class="doc-bar filled w80"></div>
+    </div>
+    <div class="doc-row">
+      <div class="doc-check-box on"></div>
+      <div class="doc-bar filled"></div>
+    </div>
+    <div class="doc-row">
+      <div class="doc-check-box on"></div>
+      <div class="doc-bar filled w60"></div>
+    </div>
+    <div class="doc-row" style="margin-top:16px; padding-top: 16px; border-top: 1px solid var(--border);">
+      <div class="doc-check-box"></div>
+      <div class="doc-bar w80"></div>
+    </div>
+    <div class="doc-row">
+      <div class="doc-check-box"></div>
+      <div class="doc-bar"></div>
+    </div>
+    <div class="doc-footer">
+      <span class="doc-meta">Päivitetty: 2025-01-15</span>
+      <span class="doc-badge">✓ Rakenteessa</span>
+    </div>
+  </div>
+</div>
+
+<!-- CREDIBILITY BAR -->
+<div class="cred-bar">
+  <div class="cred-inner">
+    <div class="cred-item">
+      <span>📋</span>
+      <span>Soveltuu <strong>Lupa- ja valvontaviraston ohjeiden</strong> mukaan</span>
+    </div>
+    <div class="cred-item">
+      <span>⚡</span>
+      <span>Käyttövalmis <strong>kertaluonteisella</strong> hankinnalla</span>
+    </div>
+    <div class="cred-item">
+      <span>🎯</span>
+      <span>Suunniteltu <strong>itsenäiselle ammattilaiselle</strong></span>
+    </div>
+    <div class="cred-item">
+      <span>📵</span>
+      <span><strong>Ei ohjelmistoa</strong> — toimii heti</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM SECTION -->
+<section class="problem-sec" id="mika-on">
+  <div class="sec">
+    <div class="eyebrow">Miksi tämä on tarpeen</div>
+    <h2 class="sec-title">Omavalvonta epäonnistuu<br>aina samalla tavalla</h2>
+    <p class="sec-sub">Useimmilla ammattilaisilla on omavalvontasuunnitelma. Harvoilla se kestää katsastuksen.</p>
+
+    <div class="problem-grid">
+      <ul class="prob-list">
+        <li class="prob-item">
+          <span class="prob-n">01</span>
+          <div class="prob-body">
+            <strong>Kopiotu pohja ei kuvaa omaa toimintaa</strong>
+            <span>Valmiit mallipohjat ovat yleisiä. Viranomainen haluaa nähdä juuri sinun käytäntösi — ei alan geneeristä listausta.</span>
+          </div>
+        </li>
+        <li class="prob-item">
+          <span class="prob-n">02</span>
+          <div class="prob-body">
+            <strong>Suunnitelmaa ei päivitetä muutosten yhteydessä</strong>
+            <span>Jos tilat, välineet tai toimintatavat muuttuvat, asiakirja on välittömästi vanhentunut — ja se näkyy tarkastuksessa.</span>
+          </div>
+        </li>
+        <li class="prob-item">
+          <span class="prob-n">03</span>
+          <div class="prob-body">
+            <strong>Vastuut on lueteltu, ei sidottu käytäntöön</strong>
+            <span>Paperilla lukee "vastaava henkilö". Arjessa kukaan ei tiedä mitä tehdään, kun poikkeama tapahtuu.</span>
+          </div>
+        </li>
+        <li class="prob-item">
+          <span class="prob-n">04</span>
+          <div class="prob-body">
+            <strong>Kirjaaminen laajenee hallitsemattomasti tai jää kokonaan pois</strong>
+            <span>Ilman selkeitä rajoja kirjataan liikaa tai ei lainkaan. Molemmat ovat ongelma.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="solution-card">
+        <h3>Rakenne ratkaisee<br>kaikki neljä ongelmaa</h3>
+        <p>
+          Omavalvontajärjestelmä ei ole lomake tai tarkistuslista.
+          Se on jäsennetty rakenne, joka ohjaa kuvaamaan oman toiminnan
+          selkeästi — niin että se kestää myös ulkopuolisen katseen.
+        </p>
+        <ul class="sol-features">
+          <li>
+            <span class="sol-check">✓</span>
+            Rakenne pakottaa kuvaamaan omat käytänteet — ei geneeristä
+          </li>
+          <li>
+            <span class="sol-check">✓</span>
+            Päivityskohdat on merkitty — tiedät milloin toimia
+          </li>
+          <li>
+            <span class="sol-check">✓</span>
+            Vastuut sidotaan konkreettisiin toimiin
+          </li>
+          <li>
+            <span class="sol-check">✓</span>
+            Kirjaamisen rajat on määritelty etukäteen
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO SECTION -->
+<section id="kenelle" style="padding-top: 88px; padding-bottom: 88px; padding-left: 32px; padding-right: 32px;">
+  <div class="sec">
+    <div class="eyebrow">Kenelle</div>
+    <h2 class="sec-title">Itsenäiset ammattilaiset<br>palvelualalla</h2>
+    <p class="sec-sub">Kaikkialla missä palvellaan asiakkaita ja toimintaan kohdistuu omavalvontavelvoite.</p>
+
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-icon">💆</div>
+        <h3>Hierojat</h3>
+        <p>Koulutettu hieroja, urheiluhieroja, lymfahieroja. Toimii useimmiten yksin — vastuu kohdistuu suoraan toimijaan.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">💅</div>
+        <h3>Kosmetologit ja ihonhoitajat</h3>
+        <p>Kasvohoidot, ihoterapia, kauneudenhoito. Laite- ja hygieniakäytännöt edellyttävät selkeää omavalvontaa.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">🏋️</div>
+        <h3>Personal trainerit</h3>
+        <p>Itsenäinen valmentaja joka toimii salilla tai kotikäynneillä. Asiakasturvallisuus ja vastuun rajaus keskeistä.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">🖋️</div>
+        <h3>Tatuoijat ja piercing-ammattilaiset</h3>
+        <p>Hygienia ja sterilointi ovat kriittisiä — omavalvontarakenne on käytännössä pakollinen.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">🌿</div>
+        <h3>Hyvinvointialan yrittäjät</h3>
+        <p>Ravintoneuvoja, joogaohjaaja, hengitysvalmentaja. Pienimuotoinen toiminta, suora henkilövastuu.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">🦷</div>
+        <h3>Muut palvelualan toimijat</h3>
+        <p>Jalkahoitajat, akupunktiohoitajat ja muut kevyen terveydenhuollon ammattilaiset jotka toimivat itsenäisesti.</p>
+      </div>
+    </div>
+
+    <div class="not-for">
+      <strong>Ei sovi:</strong> Organisaatiotason omavalvontaan, jos toiminnassa on useita toimipisteitä tai vastuu jakautuu usealle toimijalle. Tämä rakenne on suunniteltu yksinyrittäjälle tai pienelle tiimille.
+    </div>
+  </div>
+</section>
+
+<!-- SELF-CHECK -->
+<section class="check-sec" id="testi">
+  <div class="sec">
+    <div class="eyebrow">Nopea testi</div>
+    <h2 class="sec-title">Onko omavalvontasi<br>viranomaiskelpoinen?</h2>
+    <p class="sec-sub">Merkitse "kyllä" vain jos asia toteutuu aidosti arjessa ja on tarvittaessa todennettavissa — ei vain paperilla.</p>
+
+    <div class="check-layout">
+      <form class="check-form" id="checkForm">
+        <label class="check-item">
+          <input type="checkbox" class="check-cb">
+          <span class="check-label">Omavalvontasuunnitelmassa näkyy viimeisin päivityspäivä ja päivityksen syy.</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" class="check-cb">
+          <span class="check-label">Suunnitelmaa on päivitetty aina muutosten yhteydessä — ei vain kerran laadittaessa.</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" class="check-cb">
+          <span class="check-label">Riskit on kuvattu konkreettisesti oman toiminnan arjesta, ei yleisellä copy-paste-listalla.</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" class="check-cb">
+          <span class="check-label">Riskien hallinta näkyy käytännössä — ei vain tekstinä dokumentissa.</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" class="check-cb">
+          <span class="check-label">Poikkeamat ja korjaavat toimet on kirjattu niin, että viranomainen voi todentaa etenemisen.</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" class="check-cb">
+          <span class="check-label">Vastuut on nimetty konkreettisesti: kuka tekee, millä aikavälillä, miten toteutuminen varmistetaan.</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" class="check-cb">
+          <span class="check-label">Tiedät etukäteen, mitä näytät viranomaiselle, jos toteutusta pyydetään tarkastettavaksi.</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" class="check-cb">
+          <span class="check-label">Omavalvonta ohjaa oikeasti arjen valintoja — ei jää irralliseksi dokumentiksi.</span>
+        </label>
+      </form>
+
+      <div class="score-panel">
+        <div class="score-card">
+          <div class="ring-wrap">
+            <div class="score-ring">
+              <svg viewBox="0 0 110 110">
+                <circle class="ring-track" cx="55" cy="55" r="40.5"/>
+                <circle class="ring-fill" id="ringFill" cx="55" cy="55" r="40.5"/>
+              </svg>
+              <div class="score-nums">
+                <div class="score-big" id="scoreNum">0</div>
+                <div class="score-denom">/ 8</div>
+              </div>
+            </div>
+          </div>
+          <div class="score-label">
+            <h3 id="scoreTitle">Aloita testi</h3>
+            <p id="scoreDesc">Merkitse kohdat jotka toteutuvat arjessa</p>
+          </div>
+          <div class="score-feedback st-none" id="scoreFeedback">
+            Vastaa yllä oleviin kohtiin nähdäksesi arvion omavalvontasi tilasta.
+          </div>
+          <a href="#tuote" class="score-cta" id="scoreCta">
+            Katso miten rakenne auttaa →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT SECTION -->
+<section class="product-sec" id="tuote">
+  <div class="sec">
+    <div class="eyebrow">Tuote</div>
+    <h2 class="sec-title">Mitä omavalvontajärjestelmä<br>sisältää</h2>
+    <p class="sec-sub">Dokumentointirakenne jonka täytät kerran omilla tiedoillasi. Ei ohjelmistoa, ei kuukausimaksua.</p>
+
+    <div class="product-grid">
+      <ul class="feat-list">
+        <li class="feat-item">
+          <div class="feat-ico">📐</div>
+          <div class="feat-text">
+            <strong>Valmis dokumentointirakenne</strong>
+            <span>Otsikot, kentät ja rakenne valmiina. Täytät oman sisällön — et mieti mitä kuuluu olla missäkin.</span>
+          </div>
+        </li>
+        <li class="feat-item">
+          <div class="feat-ico">✍️</div>
+          <div class="feat-text">
+            <strong>Ohjetekstit kirjaamista varten</strong>
+            <span>Jokainen kenttä selittää mitä siihen kirjoitetaan ja miksi. Ei vaadi alan erikoistuntemusta.</span>
+          </div>
+        </li>
+        <li class="feat-item">
+          <div class="feat-ico">🔁</div>
+          <div class="feat-text">
+            <strong>Selkeät päivityskohdat</strong>
+            <span>Näet heti milloin suunnitelma on päivitettävä. Ei arvausta siitä milloin riittää.</span>
+          </div>
+        </li>
+        <li class="feat-item">
+          <div class="feat-ico">⚖️</div>
+          <div class="feat-text">
+            <strong>Vastuun rakenne näkyväksi</strong>
+            <span>Rakenne ohjaa määrittämään vastuut konkreettisesti — kuka, milloin, miten.</span>
+          </div>
+        </li>
+        <li class="feat-item">
+          <div class="feat-ico">🗂️</div>
+          <div class="feat-text">
+            <strong>Poikkeamakirjauksen malli</strong>
+            <span>Valmis pohja poikkeamia ja korjaavia toimia varten. Käytät vain tarvittaessa.</span>
+          </div>
+        </li>
+        <li class="feat-item">
+          <div class="feat-ico">📡</div>
+          <div class="feat-text">
+            <strong>NFC-ankkurointi (valinnainen)</strong>
+            <span>Liitä rakenne fyysiseen tilaan NFC-tunnisteen avulla. Omavalvonta löytyy aina yhdellä skannauksella.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="pricing-card">
+        <div class="pricing-head">
+          <h3>Omavalvontajärjestelmä</h3>
+          <p>Käyttöoikeus kertaluonteisesti</p>
+        </div>
+        <div class="pricing-body">
+          <div class="price-row">
+            <span class="price-amt">—</span>
+            <span class="price-note">Ajantasainen hinta Holvi-kaupassa</span>
+          </div>
+          <ul class="incl-list">
+            <li><span class="incl-check">✓</span> Omavalvonnan dokumentointirakenne</li>
+            <li><span class="incl-check">✓</span> Ohjetekstit ja selitykset kaikkiin kenttiin</li>
+            <li><span class="incl-check">✓</span> Poikkeamakirjauksen pohja</li>
+            <li><span class="incl-check">✓</span> Oikeus muokata rakennetta omaan toimintaan</li>
+            <li><span class="incl-check">✓</span> Ei käyttövelvoitetta — käytät kun tarvitset</li>
+          </ul>
+          <a href="https://holvi.com/shop/vinokasvi/product/19a59b12dfd7658fbb6f0859611d3b1b/" class="btn-buy">
+            Osta käyttöoikeus →
+          </a>
+          <p class="pricing-demo">
+            Epävarma? <a href="https://tally.so/r/QKAr9A">Varaa 30 min esittely</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NFC STRIP -->
+<div class="nfc-strip">
+  <div class="nfc-inner">
+    <div class="nfc-icon-wrap">📲</div>
+    <div class="nfc-text">
+      <h3>Fyysinen ankkurointi NFC-tunnisteella</h3>
+      <p>
+        Rakenteeseen voidaan liittää NFC-tunniste, joka toimii avaimena dokumentointiin.
+        Skannaa — omavalvonta avautuu heti. Ei kerää tietoa eikä seuraa käyttöä.
+        Sopii erityisesti ammattilaisille jotka toimivat eri paikoissa.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <a href="/" class="foot-brand">Laatuhieronta</a>
+    <ul class="foot-links">
+      <li><a href="/omavalvonta/">Omavalvonta</a></li>
+      <li><a href="/laatu/">Laatu</a></li>
+      <li><a href="/vastuu-ja-lainsaadanto/">Vastuu</a></li>
+      <li><a href="/tietoa/">Tietoa</a></li>
+      <li><a href="/riikka-kallio/">Riikka Kallio</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var cbs = document.querySelectorAll('.check-cb');
+  var ringFill = document.getElementById('ringFill');
+  var scoreNum = document.getElementById('scoreNum');
+  var scoreTitle = document.getElementById('scoreTitle');
+  var scoreDesc = document.getElementById('scoreDesc');
+  var scoreFeedback = document.getElementById('scoreFeedback');
+  var scoreCta = document.getElementById('scoreCta');
+  var circumference = 254;
+
+  var states = {
+    none: { title: 'Aloita testi', desc: 'Merkitse kohdat jotka toteutuvat arjessa', cls: 'st-none', stroke: '#D8D3C8' },
+    low:  { title: 'Omavalvonta on ohut', desc: 'Rakenne puuttuu käytännössä kokonaan', cls: 'st-low', stroke: '#EF4444' },
+    mid:  { title: 'Minimitaso täyttyy osin', desc: 'Rakenteessa on merkittäviä aukkoja', cls: 'st-mid', stroke: '#0cc0df' },
+    good: { title: 'Rakenne on kunnossa', desc: 'Omavalvonta kestää todennäköisesti katselmoinnin', cls: 'st-good', stroke: '#8c52ff' }
+  };
+
+  var feedbackText = {
+    none: 'Vastaa yllä oleviin kohtiin nähdäksesi arvion omavalvontasi tilasta.',
+    low:  '0–3 kyllä: Omavalvonta on käytännössä liian ohut, vaikka suunnitelma olisi olemassa. Rakenne puuttuu — dokumentti ei yksin riitä.',
+    mid:  '4–6 kyllä: Minimitaso täyttyy osin, mutta rakenteessa on aukkoja jotka voivat tulla esiin viranomaistarkastuksessa.',
+    good: '7–8 kyllä: Omavalvonta on todennäköisesti viranomaisnäkökulmasta perusteltu ja todennettava. Varmista että päivitykset pysyvät ajan tasalla.'
+  };
+
+  function getState(n, total) {
+    if (total === 0) return 'none';
+    if (n <= 3) return 'low';
+    if (n <= 6) return 'mid';
+    return 'good';
+  }
+
+  function update() {
+    var checked = document.querySelectorAll('.check-cb:checked').length;
+    var total = cbs.length;
+    var state = getState(checked, total);
+    var offset = checked === 0
+      ? circumference
+      : circumference - (checked / total) * circumference;
+
+    ringFill.style.strokeDashoffset = offset;
+    ringFill.style.stroke = states[state].stroke;
+    scoreNum.textContent = checked;
+
+    scoreTitle.textContent = states[state].title;
+    scoreDesc.textContent = states[state].desc;
+
+    scoreFeedback.className = 'score-feedback ' + states[state].cls;
+    scoreFeedback.textContent = feedbackText[state];
+
+    if (checked >= 4) {
+      scoreCta.classList.add('visible');
+    } else {
+      scoreCta.classList.remove('visible');
+    }
+  }
+
+  cbs.forEach(function (cb) {
+    cb.addEventListener('change', update);
+  });
+})();
+</script>
+
+</body>
+</html>
