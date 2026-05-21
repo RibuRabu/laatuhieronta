@@ -284,11 +284,17 @@
 
     /* WHO */
     .who-sec { background: var(--bg); }
-    .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-top: 52px; }
+    .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
     .who-card { background: var(--white); padding: 26px 28px; }
+    .who-card--opt { background: #fafafa; }
     .who-icon { font-size: 1.4rem; margin-bottom: 10px; }
     .who-card h3 { font-weight: 600; font-size: 0.9rem; margin-bottom: 5px; }
     .who-card p { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+    .who-group-head { margin: 44px 0 12px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .who-group-tag { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; flex-shrink: 0; }
+    .who-group-tag.required { background: var(--purple-tint); color: var(--purple); }
+    .who-group-tag.optional { background: var(--teal-tint); color: var(--teal); }
+    .who-group-desc { font-size: 0.8rem; color: var(--muted); }
     .who-note { margin-top: 24px; padding: 14px 18px; background: var(--purple-tint); border-radius: var(--radius); font-size: 0.83rem; color: var(--muted); }
     .who-note strong { color: var(--text); }
 
@@ -551,16 +557,32 @@
 <section class="sec who-sec" id="kenelle">
   <div class="sec-in">
     <div class="eyebrow">Kenelle</div>
-    <h2 class="sec-title">Itsenäiset sote-alan<br>ammattilaiset</h2>
-    <p class="sec-sub">Kaikki yksityiset palveluntarjoajat joilla on omavalvontavelvoite lain nojalla.</p>
-    <div class="who-grid">
-      <div class="who-card"><div class="who-icon">💆</div><h3>Hierojat</h3><p>Koulutettu hieroja, urheiluhieroja, lymfahieroja. Toimii yleensä yksin tai pienessä tilassa.</p></div>
-      <div class="who-card"><div class="who-icon">🏃</div><h3>Fysioterapeutit</h3><p>Yksityinen vastaanotto tai kotikäynnit. Terveydenhuollon ammattihenkilö — omavalvonta lakisääteinen.</p></div>
-      <div class="who-card"><div class="who-icon">🧠</div><h3>Psykologit ja terapeutit</h3><p>Yksityinen psykologi, psykoterapeutti, toimintaterapeutti. Asiakastiedot ja tietosuoja keskeisiä.</p></div>
-      <div class="who-card"><div class="who-icon">💅</div><h3>Kauneudenhoitoala</h3><p>Kosmetologi, ihonhoitaja. Laite- ja hygieniakäytännöt edellyttävät selkeää omavalvontaa.</p></div>
-      <div class="who-card"><div class="who-icon">🌿</div><h3>Hyvinvointialan yrittäjät</h3><p>Ravitsemusneuvoja, personal trainer, joogaohjaaja. Pienimuotoinen toiminta, suora henkilövastuu.</p></div>
-      <div class="who-card"><div class="who-icon">🦷</div><h3>Muut sote-palvelut</h3><p>Jalkahoitaja, akupunktiohoitaja ja muut yksityiset terveys- ja hyvinvointipalvelut.</p></div>
+    <h2 class="sec-title">Lakisääteinen tai ei —<br>rakenne on sama</h2>
+    <p class="sec-sub">Osalle velvoite tulee laista automaattisesti. Osalle se on vapaaehtoinen — mutta järkevä tapa rakentaa ammattimaisesti.</p>
+
+    <div class="who-group-head">
+      <span class="who-group-tag required">Lakisääteinen velvoite</span>
+      <span class="who-group-desc">Nimikesuojatut ja laillistetut terveydenhuollon ammattihenkilöt</span>
     </div>
+    <div class="who-grid">
+      <div class="who-card"><div class="who-icon">💆</div><h3>Hierojat</h3><p>Koulutettu hieroja on nimikesuojattu terveydenhuollon ammattihenkilö. Velvoite seuraa siitä automaattisesti.</p></div>
+      <div class="who-card"><div class="who-icon">🏃</div><h3>Fysioterapeutit</h3><p>Laillistettu ammattihenkilö. Omavalvonta pakollinen yksityisellä vastaanotolla tai kotikäynneillä.</p></div>
+      <div class="who-card"><div class="who-icon">🧠</div><h3>Psykologit ja psykoterapeutit</h3><p>Psykologi on laillistettu, psykoterapeutti nimikesuojattu. Asiakastiedot ja tietosuoja keskeisiä.</p></div>
+      <div class="who-card"><div class="who-icon">👣</div><h3>Jalkaterapeutit</h3><p>Nimikesuojattu ammattihenkilö — ei pidä sekoittaa jalkahoitajaan, jolla eri asema.</p></div>
+      <div class="who-card"><div class="who-icon">🦴</div><h3>Kiropraktikot, naprapaatit, osteopaatit</h3><p>Nimikesuojattu ammattihenkilö. Velvoite koskee yksityistä vastaanottotoimintaa.</p></div>
+      <div class="who-card"><div class="who-icon">➕</div><h3>Muut sote-ammattihenkilöt</h3><p>Toimintaterapeutti, puheterapeutti ja muut laillistetut tai nimikesuojatut yksityisellä vastaanotolla.</p></div>
+    </div>
+
+    <div class="who-group-head">
+      <span class="who-group-tag optional">Vapaaehtoinen — mutta kannattaa</span>
+      <span class="who-group-desc">Ei lakisääteistä velvoitetta, mutta selkeä rakenne rakentaa luottamusta</span>
+    </div>
+    <div class="who-grid">
+      <div class="who-card who-card--opt"><div class="who-icon">💄</div><h3>Kosmetologit</h3><p>Perushoitoja tekevällä ei lakisääteistä velvoitetta. Esteettisiä toimenpiteitä (pistoshoitot ym.) tekevältä velvoite syntyy erillisen lain nojalla.</p></div>
+      <div class="who-card who-card--opt"><div class="who-icon">💪</div><h3>Hyvinvointialan yrittäjät</h3><p>Personal trainer, ravitsemusneuvoja, valmentaja. Ei rekisteröity ammattihenkilö — velvoitetta ei ole, mutta rakenne tukee ammattimaista toimintaa.</p></div>
+      <div class="who-card who-card--opt"><div class="who-icon">🌿</div><h3>Wellness-palvelut</h3><p>Joogaohjaaja, akupunktiohoitaja, jalkahoitaja. Selkeä omavalvontarakenne erottaa vastuullisen toimijan.</p></div>
+    </div>
+
     <div class="who-note"><strong>Huom:</strong> Tämä työkalu on suunnattu yksinyrittäjille ja pienille tiimeille. Organisaatiotason omavalvontaan tarvitset laajemman ratkaisun.</div>
   </div>
 </section>
