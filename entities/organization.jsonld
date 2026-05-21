@@ -2,17 +2,22 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://laatuhieronta.fi/#organization",
-  "name": "Laatuhieronta",
+  "name": "Fiksiribu",
+  "alternateName": "Laatuhieronta.fi",
   "url": "https://laatuhieronta.fi/",
-  "description": "Laatuhieronta on koulutetulle hierojalle suunnattu rakenteellinen kokonaisuus, joka jäsentää omavalvontaa, vastuuta, dokumentoinnin rakennetta ja laatuajattelua.",
+  "description": "Fiksiribu on Riikka Kallion toiminimi. Laatuhieronta.fi on sen tuottama palvelu — kevyt selaintyökalu sote-alan pienyrittäjälle omavalvontasuunnitelman luomiseen ja hallintaan.",
   "founder": {
-    "@id": "https://laatuhieronta.fi/riikka-kallio/#person"
+    "@id": "https://laatuhieronta.fi/sivustosta/#person"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "info@laatuhieronta.fi",
+    "contactType": "customer support"
   },
   "knowsAbout": [
     "Omavalvonta",
     "Ammatillinen vastuu",
     "Dokumentointirakenne",
-    "Laatuajattelu",
     "Omavalvontajärjestelmä"
   ]
 }

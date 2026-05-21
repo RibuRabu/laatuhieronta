@@ -1,37 +1,17 @@
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "@id": "https://laatuhieronta.fi/omavalvonta#page",
-  "url": "https://laatuhieronta.fi/omavalvonta",
+  "@type": "DefinedTerm",
+  "@id": "https://laatuhieronta.fi/omavalvonta#term",
   "name": "Omavalvonta",
   "inLanguage": "fi",
+  "description": "Omavalvonta on lakisääteinen velvoite yksityisille sote-alan palveluntuottajille. Se tarkoittaa, että toiminnanharjoittaja itse varmistaa palvelujensa laadun ja turvallisuuden sekä dokumentoi tämän kirjallisessa omavalvontasuunnitelmassa.",
+  "inDefinedTermSet": {
+    "@id": "https://laatuhieronta.fi/laatuhieronta#termset"
+  },
   "isPartOf": {
     "@id": "https://laatuhieronta.fi/#website"
   },
-  "about": {
-    "@id": "https://laatuhieronta.fi/laatuhieronta#termset"
-  },
-  "author": {
-    "@id": "https://laatuhieronta.fi/riikka-kallio/#person"
-  },
   "publisher": {
     "@id": "https://laatuhieronta.fi/#organization"
-  },
-  "hasPart": [
-    {
-      "@id": "https://laatuhieronta.fi/omavalvonta-koulutettu-hieroja#article"
-    },
-    {
-      "@id": "https://laatuhieronta.fi/milloin-omavalvontaa-paivitetaan#article"
-    },
-    {
-      "@id": "https://laatuhieronta.fi/omavalvonta-ei-ole-raportointia#article"
-    },
-    {
-      "@id": "https://laatuhieronta.fi/omavalvonta/jarjestelma/#webpage"
-    },
-    {
-      "@id": "https://laatuhieronta.fi/laatuajattelu#article"
-    }
-  ]
+  }
 }

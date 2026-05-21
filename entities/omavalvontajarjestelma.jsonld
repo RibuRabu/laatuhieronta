@@ -5,7 +5,7 @@
       "@type": "WebPage",
       "@id": "https://laatuhieronta.fi/omavalvonta/jarjestelma/#webpage",
       "url": "https://laatuhieronta.fi/omavalvonta/jarjestelma/",
-      "name": "Omavalvontajärjestelmä koulutetulle hierojalle",
+      "name": "Omavalvontajärjestelmä – valmis rakenne sote-alan ammattilaiselle",
       "inLanguage": "fi",
       "isPartOf": {
         "@id": "https://laatuhieronta.fi/#website"
@@ -21,30 +21,31 @@
       }
     },
     {
-      "@type": "Product",
+      "@type": "SoftwareApplication",
       "@id": "https://laatuhieronta.fi/omavalvonta/jarjestelma/#product",
       "name": "Omavalvontajärjestelmä",
-      "description": "Omavalvonnan dokumentointirakenne koulutetulle hierojalle. Kokonaisuus jäsentää vastuun kohdentumista, kirjaamisen periaatteita ja toiminnan rakenteita.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Valmis omavalvonnan dokumentointirakenne sote-alan itsenäiselle ammattilaiselle. Jäsentää vastuun kohdentumisen, kirjaamisen periaatteet ja toiminnan rakenteet.",
       "url": "https://laatuhieronta.fi/omavalvonta/jarjestelma/",
-      "brand": {
-        "@id": "https://laatuhieronta.fi/#organization"
+      "offers": {
+        "@type": "Offer",
+        "price": "19.90",
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "19.90",
+          "priceCurrency": "EUR",
+          "unitCode": "MON"
+        }
       },
       "audience": {
         "@type": "Audience",
-        "audienceType": "Koulutettu hieroja"
+        "audienceType": "Sote-alan itsenäiset ammatinharjoittajat — nimikesuojatut ja laillistetut terveydenhuollon ammattihenkilöt"
       },
-      "additionalProperty": [
-        {
-          "@type": "PropertyValue",
-          "name": "Tuotetyyppi",
-          "value": "Omavalvonnan dokumentointirakenne"
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "NFC-yhteensopivuus",
-          "value": "Rakenteeseen voidaan liittää NFC-tunniste käytön ankkurointiin."
-        }
-      ]
+      "brand": {
+        "@id": "https://laatuhieronta.fi/#organization"
+      }
     }
   ]
 }

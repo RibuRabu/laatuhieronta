@@ -3,8 +3,9 @@
   "@type": "WebSite",
   "@id": "https://laatuhieronta.fi/#website",
   "url": "https://laatuhieronta.fi/",
-  "name": "Laatuhieronta",
+  "name": "Laatuhieronta.fi",
   "inLanguage": "fi",
+  "description": "Kevyt selaintyökalu sote-alan pienyrittäjälle omavalvontasuunnitelman luomiseen, hallintaan ja julkaisemiseen.",
   "publisher": {
     "@id": "https://laatuhieronta.fi/#organization"
   }
