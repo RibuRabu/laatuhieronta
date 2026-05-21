@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aloita käyttöjakso – Omavalvontajärjestelmä | Laatuhieronta.fi</title>
+  <meta name="description" content="Kaikki mitä tarvitset päätöksen tekemiseen ennen tunnuksen luontia. 14 päivän käyttöjakso, 19,90 €/kk sen jälkeen, ei sitoutumista.">
+  <link rel="canonical" href="https://laatuhieronta.fi/omavalvonta/aloita/">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f9f7ff;--white:#ffffff;--purple:#8c52ff;--purple-tint:#f0ebff;--teal:#0cc0df;--teal-tint:#e6f9fd;--grad:linear-gradient(135deg,#8c52ff 0%,#5ce1e6 100%);--text:#19141f;--muted:#655b78;--border:#ddd6f8;--radius:6px;--max:640px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{font-size:16px;scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'Bricolage Grotesque',sans-serif;font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 32px}
+    .nav-in{max-width:var(--max);margin:0 auto;height:58px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;text-decoration:none;letter-spacing:-0.02em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-back{color:var(--muted);font-size:0.875rem;text-decoration:none;transition:color 0.15s}
+    .nav-back:hover{color:var(--text)}
+    .page-hero{padding:104px 32px 48px;background:var(--white);border-bottom:1px solid var(--border)}
+    .page-hero-in{max-width:var(--max);margin:0 auto}
+    .eyebrow{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+    h1{font-family:'Fraunces',serif;font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;line-height:1.1;letter-spacing:-0.03em;color:var(--text);margin-bottom:14px}
+    .page-lead{font-size:1rem;color:var(--muted);line-height:1.7;max-width:520px}
+    .page-body{max-width:var(--max);margin:0 auto;padding:48px 32px 96px}
+
+    /* DECISION SECTIONS */
+    .d-section{border-bottom:1px solid var(--border);padding:28px 0}
+    .d-section:last-of-type{border-bottom:none}
+    .d-num{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+    .d-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:12px;letter-spacing:-0.02em}
+    .d-body{font-size:0.95rem;color:var(--muted);line-height:1.7}
+    .d-body p{margin-bottom:0.75rem}
+    .d-body p:last-child{margin-bottom:0}
+    .d-body ul{padding-left:1.3rem;margin-bottom:0}
+    .d-body li{margin-bottom:0.35rem;font-size:0.95rem}
+    .d-body strong{color:var(--text)}
+
+    /* FACT ROW */
+    .fact-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .fact-chip{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:8px 14px;font-size:0.82rem;color:var(--text);font-weight:500}
+    .fact-chip span{display:block;font-size:0.68rem;color:var(--muted);font-weight:400;margin-top:2px}
+
+    /* DARK BOX */
+    .dark-box{margin:16px 0 0;padding:1.25rem 1.5rem;background:#0f0d18;border-radius:10px;position:relative;overflow:hidden}
+    .dark-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad)}
+    .dark-box p,.dark-box li{color:rgba(255,255,255,0.7);font-size:0.9rem}
+    .dark-box strong{color:#fff}
+    .dark-box ul{padding-left:1.2rem}
+    .dark-box li{margin-bottom:0.3rem}
+
+    /* TERMS BOX */
+    .terms-box{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;margin-top:16px;font-size:0.875rem;color:var(--muted);line-height:1.65}
+    .terms-box li{margin-bottom:0.4rem}
+    .terms-box a{color:var(--purple);text-decoration:none;font-weight:500}
+    .terms-box a:hover{text-decoration:underline}
+
+    /* CTA SECTION */
+    .cta-section{margin-top:40px;padding-top:32px;border-top:2px solid var(--border)}
+    .cta-section-title{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:600;color:var(--text);margin-bottom:20px;letter-spacing:-0.02em}
+    .accept-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:20px;cursor:pointer}
+    .accept-row input[type="checkbox"]{width:18px;height:18px;accent-color:var(--purple);flex-shrink:0;margin-top:2px;cursor:pointer}
+    .accept-label{font-size:0.9rem;color:var(--muted);line-height:1.5}
+    .accept-label a{color:var(--purple);text-decoration:none;font-weight:500}
+    .accept-label a:hover{text-decoration:underline}
+    .btn-start{display:block;width:100%;text-align:center;background:var(--grad);color:#fff;padding:16px;border-radius:var(--radius);font-weight:600;font-size:1rem;text-decoration:none;transition:opacity 0.15s;pointer-events:none;opacity:0.4}
+    .btn-start.active{pointer-events:auto;opacity:1}
+    .btn-start.active:hover{opacity:0.85}
+    .cta-note{text-align:center;font-size:0.78rem;color:var(--muted);margin-top:12px}
+
+    footer{background:#0f0d18;border-top:1px solid rgba(255,255,255,0.06);padding:40px 32px}
+    .foot-in{max-width:var(--max);margin:0 auto}
+    .foot-legal{font-size:0.75rem;color:rgba(255,255,255,0.2)}
+    @media(max-width:600px){.page-hero{padding:88px 20px 40px}.page-body{padding:32px 20px 72px}nav{padding:0 20px}.fact-row{flex-direction:column}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a href="/" class="nav-logo">Laatuhieronta.fi</a>
+    <a href="/omavalvonta/jarjestelma/" class="nav-back">← Takaisin</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="page-hero-in">
+    <div class="eyebrow">Ennen aloittamista</div>
+    <h1>Kaikki mitä tarvitset päätöksen tekemiseen</h1>
+    <p class="page-lead">Lue tämä ennen tunnuksen luontia. Ei piilotettuja ehtoja, ei yllätyksiä laskutuksessa.</p>
+  </div>
+</header>
+
+<div class="page-body">
+
+  <div class="d-section">
+    <div class="d-num">1 — Mitä olet aloittamassa</div>
+    <div class="d-title">Omavalvontajärjestelmä sote-alan ammattihenkilölle</div>
+    <div class="d-body">
+      <p>Selainpohjainen työkalu lakisääteisen omavalvontasuunnitelman dokumentointiin. Tarkoitettu itsenäisille ammatinharjoittajille ja pienyrittäjille — hierojille, fysioterapeuteille, psykologeille, jalkaterapeuteille, kiropraktikoille ja muille laillistetuille tai nimikesuojatuille sote-ammattihenkilöille.</p>
+      <p>Työkalu ei ole oikeudellinen neuvontapalvelu. Se ei korvaa Lupa- ja valvontaviraston virallisia ohjeita.</p>
+    </div>
+  </div>
+
+  <div class="d-section">
+    <div class="d-num">2 — Käyttöjakso</div>
+    <div class="d-title">14 päivää maksutta</div>
+    <div class="d-body">
+      <p>Tunnuksen luonnin jälkeen sinulla on <strong>14 päivän täysi käyttöoikeus</strong> ilman maksua. Käyttöjakson aikana näet kaiken — rakenteen, ohjetekstit, tallennuksen, kaiken.</p>
+      <p>Käyttöjakso alkaa tunnuksen luontihetkestä. Sitä ei voi pysäyttää tai siirtää.</p>
+    </div>
+  </div>
+
+  <div class="d-section">
+    <div class="d-num">3 — Mitä käyttö sisältää</div>
+    <div class="d-title">Kaikki ominaisuudet mukana heti</div>
+    <div class="d-body">
+      <ul>
+        <li>Valmis omavalvontasuunnitelman rakenne ohjeteksteineen</li>
+        <li>Kaikki Luovan määräyksen mukaiset kohdat jäsenneltyinä</li>
+        <li>Poikkeamien kirjaamisrakenne aikaleimalla</li>
+        <li>Suunnitelma tallennetaan ja on päivitettävissä</li>
+        <li>Muistutukset kun päivitys on ajankohtainen</li>
+        <li><strong>Julkinen linkki omavalvontasuunnitelmallesi</strong> — jaat sen asiakkaille tai viranomaistarkastuksessa yhdellä klikkauksella</li>
+        <li><strong>Julkinen linkki tietosuojaselosteellesi</strong> — ei erikseen pyydettäessä laadittava dokumentti, aina ajan tasalla</li>
+      </ul>
+      <div class="dark-box">
+        <p>Ei erillisiä tasoja, ei lisäosia. Yksi hinta, kaikki mukana.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-section">
+    <div class="d-num">4 — Laskutus</div>
+    <div class="d-title">Valitse laskutusjakso</div>
+    <div class="d-body">
+      <p>Käyttöjakson päätyttyä valitset laskutusjakson. Veloitus tapahtuu jakson alussa ennakkoon.</p>
+      <div class="fact-row">
+        <div class="fact-chip">19,90 €/kk<span>kuukausittain</span></div>
+        <div class="fact-chip">X,XX €/kk<span>4 kuukautta kerrallaan</span></div>
+        <div class="fact-chip">X,XX €/kk<span>6 kuukautta kerrallaan</span></div>
+        <div class="fact-chip">X,XX €/kk<span>12 kuukautta kerrallaan</span></div>
+      </div>
+      <p style="margin-top:12px;font-size:0.82rem">Kaikki hinnat sis. ALV 25,5 %. Ei aktivointimaksua, ei piilomaksuja.</p>
+    </div>
+  </div>
+
+  <div class="d-section">
+    <div class="d-num">5 — Sitovuus</div>
+    <div class="d-title">Ei sitoutumista, ei minimijaksoa</div>
+    <div class="d-body">
+      <p>Voit peruuttaa tilauksen milloin tahansa. Peruutus astuu voimaan seuraavan laskutuskauden alusta — maksettu jakso on käytettävissä loppuun.</p>
+      <p>Peruutus tapahtuu omista asetuksistasi tai sähköpostilla <strong>info@laatuhieronta.fi</strong>.</p>
+    </div>
+  </div>
+
+  <div class="d-section">
+    <div class="d-num">6 — Käyttöjakson jälkeen</div>
+    <div class="d-title">Mitä tapahtuu jos et jatka</div>
+    <div class="d-body">
+      <p>Jos peruutat ennen käyttöjakson päättymistä, tilaus ei aktivoidu eikä veloitusta tule. Saat muistutuksen sähköpostilla ennen jakson päättymistä.</p>
+      <p>Jos et jatka, pääsy järjestelmään päättyy tilauskauden lopussa. Tallentamasi tiedot poistetaan <strong>7 päivän sisällä</strong> tilauksen päättymisestä.</p>
+    </div>
+  </div>
+
+  <div class="d-section">
+    <div class="d-num">7 — Tietojen käsittely</div>
+    <div class="d-title">Tietosi pysyvät sinun</div>
+    <div class="d-body">
+      <ul>
+        <li>Tiedot tallennetaan salattuna EU:n alueella sijaitsevalle palvelimelle</li>
+        <li>Tietoja ei myydä tai luovuteta kolmansille osapuolille</li>
+        <li>Voit pyytää tietojesi poistamista milloin tahansa</li>
+        <li>Kirjautuminen tapahtuu sähköpostilla tai Google-tilillä — salasanoja ei tallenneta palvelimelle</li>
+        <li>Yhteys palveluun on salattu (HTTPS) kaikissa tilanteissa</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="d-section">
+    <div class="d-num">8 — Ehdot lyhyesti</div>
+    <div class="d-title">Mitä hyväksyt</div>
+    <div class="d-body">
+      <div class="terms-box">
+        <ul>
+          <li>Palvelu on tarkoitettu ammatilliseen käyttöön</li>
+          <li>Vastaat syöttämiesi tietojen oikeellisuudesta</li>
+          <li>Palvelu ei korvaa oikeudellista tai viranomaisen neuvontaa</li>
+          <li>Tilauksen voi peruuttaa milloin tahansa ilman lisäkuluja</li>
+          <li>Veloitus alkaa 14 päivän käyttöjakson jälkeen</li>
+        </ul>
+      </div>
+      <p style="margin-top:14px;font-size:0.82rem;color:var(--muted)"><strong style="color:var(--text)">Peruutusoikeus:</strong> Kuluttajansuojalain mukainen 14 päivän peruutusoikeus koskee digitaalisia palveluja. Koska pyydät palvelun käynnistämistä välittömästi tunnuksen luonnin jälkeen, hyväksyt että peruutusoikeus raukeaa kun palvelun toimittaminen alkaa. 14 päivän maksuttoman käyttöjakson aikana voit kuitenkin peruuttaa ilman veloitusta.</p>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <div class="cta-section-title">Aloita 14 päivän käyttöjakso</div>
+    <label class="accept-row">
+      <input type="checkbox" id="terms-check">
+      <span class="accept-label">Olen lukenut yllä olevat ehdot ja hyväksyn ne.</span>
+    </label>
+    <label class="accept-row">
+      <input type="checkbox" id="withdrawal-check">
+      <span class="accept-label">Pyydän palvelun käynnistämistä välittömästi ja ymmärrän, että kuluttajansuojalain mukainen peruutusoikeus raukeaa palvelun toimittamisen alettua. Voin silti peruuttaa maksutta 14 päivän käyttöjakson aikana.</span>
+    </label>
+    <a href="https://omavalvonta.laatuhieronta.fi/sign-up" id="start-btn" class="btn-start">Luo tunnus ja aloita →</a>
+    <p class="cta-note">14 päivää maksutta · 19,90 €/kk sen jälkeen · peruuta milloin tahansa</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-in">
+    <p class="foot-legal">© 2026 Fiksiribu · Sivuston sisältö on yleistä tietoa eikä korvaa Lupa- ja valvontaviraston virallisia ohjeita tai ammatillista neuvontaa.</p>
+  </div>
+</footer>
+
+<script>
+  const termsCheck = document.getElementById('terms-check');
+  const withdrawalCheck = document.getElementById('withdrawal-check');
+  const btn = document.getElementById('start-btn');
+  function updateBtn() {
+    btn.classList.toggle('active', termsCheck.checked && withdrawalCheck.checked);
+  }
+  termsCheck.addEventListener('change', updateBtn);
+  withdrawalCheck.addEventListener('change', updateBtn);
+</script>
+
+<div id="analytics-consent" style="display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:480px;margin:0 auto;padding:12px 14px;border:1px solid #d4d4d4;border-radius:10px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.12);font:14px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#111;">
+  <strong style="display:block;margin:0 0 6px;">Analytiikka</strong>
+  <p style="margin:0 0 10px;">Tällä sivustolla voidaan käyttää kevyttä analytiikkaa käytön ymmärtämiseen ja palvelun kehittämiseen.</p>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;">
+    <button id="analytics-accept" type="button" style="border:0;border-radius:8px;padding:8px 10px;background:#111;color:#fff;cursor:pointer;">Hyväksy analytiikka</button>
+    <button id="analytics-decline" type="button" style="border:1px solid #b9b9b9;border-radius:8px;padding:8px 10px;background:#fff;color:#111;cursor:pointer;">Jatka ilman analytiikkaa</button>
+  </div>
+</div>
+<script src="/assets/analytics-consent.js" defer></script>
+
+</body>
+</html>
