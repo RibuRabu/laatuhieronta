@@ -64,6 +64,10 @@
     .dark-box strong{color:#fff}
     .dark-box ul{margin-bottom:0;padding-left:1.2rem}
     .cta-row{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);display:flex;gap:12px;flex-wrap:wrap}
+    .solution-box{margin:2rem 0;padding:1.5rem 1.75rem;background:linear-gradient(135deg,rgba(140,82,255,0.05) 0%,rgba(92,225,230,0.05) 100%);border:1px solid var(--border);border-radius:10px;position:relative}
+    .solution-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);border-radius:10px 10px 0 0}
+    .solution-label{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--purple);margin-bottom:10px}
+    .solution-box p{margin:0;font-size:0.95rem;color:var(--text)}
     .btn-grad{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;padding:12px 22px;border-radius:var(--radius);font-weight:600;font-size:0.9rem;text-decoration:none;transition:opacity 0.15s}
     .btn-grad:hover{opacity:0.85;text-decoration:none}
     .btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);padding:12px 22px;border-radius:var(--radius);border:1px solid var(--border);font-size:0.9rem;text-decoration:none;transition:border-color 0.15s}
@@ -146,6 +150,11 @@
   </div>
 
   <p>Dokumentaation tarkoitus on tehdä toiminta <strong>näkyväksi ja tarkistettavaksi</strong> — ei osoittaa huolellisuutta määrällä.</p>
+
+  <div class="solution-box">
+    <div class="solution-label">Miten järjestelmä auttaa</div>
+    <p>Kun toimintasi muuttuu, tiedät tarkalleen mitä kohtaa päivittää — ei koko dokumenttia uusiksi. Rakenne pysyy, sisältö elää toiminnan mukana.</p>
+  </div>
 
   <div class="cta-row">
     <a href="/omavalvonta/jarjestelma/" class="btn-grad">Valmis rakenne arkeen →</a>
