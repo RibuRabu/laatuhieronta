@@ -3,172 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omavalvontasuunnitelma – sisältö, rakenne ja yleisimmät virheet | Laatuhieronta</title>
-  <meta name="description" content="Mitä omavalvontasuunnitelma sisältää, mitkä ovat pakolliset osat lupa- ja valvontaviranomaisen mukaan ja mitkä ovat yleisimmät virheet. Käytännön opas hierojalle.">
+  <title>Omavalvontasuunnitelma – mitä siinä pitää olla | Laatuhieronta.fi</title>
+  <meta name="description" content="Viisi pakollista osa-aluetta, kahdeksan valvontaviraston vaatimaa kohtaa ja viisi yleisintä virhettä. Käytännön opas omavalvontasuunnitelmaan.">
   <link rel="canonical" href="https://laatuhieronta.fi/lisatietoa/suunnitelma/">
-  <link rel="stylesheet" href="/style.css?v=3">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://laatuhieronta.fi/lisatietoa/suunnitelma/#webpage",
-    "url": "https://laatuhieronta.fi/lisatietoa/suunnitelma/",
-    "name": "Omavalvontasuunnitelma – sisältö, rakenne ja yleisimmät virheet",
-    "inLanguage": "fi",
-    "isPartOf": { "@id": "https://laatuhieronta.fi/#website" },
-    "publisher": { "@id": "https://laatuhieronta.fi/#organization" }
-  }
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f9f7ff;--white:#ffffff;--purple:#8c52ff;--purple-dark:#7540e8;--purple-tint:#f0ebff;--teal:#0cc0df;--grad:linear-gradient(135deg,#8c52ff 0%,#5ce1e6 100%);--text:#19141f;--muted:#655b78;--border:#ddd6f8;--radius:6px;--max:720px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{font-size:16px;scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'Bricolage Grotesque',sans-serif;font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 32px}
+    .nav-in{max-width:var(--max);margin:0 auto;height:58px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;text-decoration:none;letter-spacing:-0.02em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-back{color:var(--muted);font-size:0.875rem;text-decoration:none;transition:color 0.15s}
+    .nav-back:hover{color:var(--text)}
+    .page-hero{padding:104px 32px 56px;background:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(140,82,255,0.07) 0%,transparent 70%),var(--white);border-bottom:1px solid var(--border)}
+    .page-hero-in{max-width:var(--max);margin:0 auto}
+    .eyebrow{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+    h1{font-family:'Fraunces',serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;line-height:1.1;letter-spacing:-0.03em;color:var(--text);margin-bottom:16px}
+    .page-lead{font-size:1.05rem;color:var(--muted);line-height:1.7;max-width:560px}
+    .page-body{max-width:var(--max);margin:0 auto;padding:56px 32px 96px}
+    h2{font-family:'Fraunces',serif;font-size:clamp(1.25rem,2.5vw,1.6rem);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:var(--text);margin-top:2.5rem;margin-bottom:0.75rem}
+    p{color:var(--muted);margin-bottom:1rem;font-size:1rem;line-height:1.7}
+    p strong{color:var(--text)}
+    ul,ol{color:var(--muted);margin-bottom:1rem;padding-left:1.4rem}
+    li{margin-bottom:0.4rem;font-size:1rem;line-height:1.65}
+    a{color:var(--purple);text-decoration:none;font-weight:500}
+    a:hover{text-decoration:underline}
+    .hl-box{margin:2rem 0;padding:1.25rem 1.5rem;background:var(--purple-tint);border:1px solid var(--border);border-left:3px solid var(--purple);border-radius:var(--radius)}
+    .hl-box p{margin:0;font-size:0.95rem}
+    .dark-box{margin:2rem 0;padding:1.5rem 1.75rem;background:#0f0d18;border-radius:10px;position:relative;overflow:hidden}
+    .dark-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
+    .dark-box-label{font-size:0.65rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:12px}
+    .dark-box p,.dark-box li{color:rgba(255,255,255,0.7)}
+    .dark-box strong{color:#fff}
+    .dark-box ul,.dark-box ol{margin-bottom:0;padding-left:1.2rem}
+    .dark-box li{margin-bottom:0.6rem}
+    .mistake-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:1.25rem}
+    .mistake-list li{border-left:3px solid var(--border);padding-left:1rem}
+    .mistake-list li strong{display:block;color:var(--text);margin-bottom:3px}
+    .cta-row{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);display:flex;gap:12px;flex-wrap:wrap}
+    .btn-grad{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;padding:12px 22px;border-radius:var(--radius);font-weight:600;font-size:0.9rem;text-decoration:none;transition:opacity 0.15s}
+    .btn-grad:hover{opacity:0.85;text-decoration:none}
+    .btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);padding:12px 22px;border-radius:var(--radius);border:1px solid var(--border);font-size:0.9rem;text-decoration:none;transition:border-color 0.15s}
+    .btn-outline:hover{border-color:var(--purple);color:var(--purple);text-decoration:none}
+    footer{background:#0f0d18;border-top:1px solid rgba(255,255,255,0.06);padding:48px 32px}
+    .foot-in{max-width:var(--max);margin:0 auto}
+    .foot-logo{font-family:'Fraunces',serif;font-size:0.95rem;font-weight:500;text-decoration:none;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:28px}
+    .foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:28px}
+    .foot-sec-title{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:12px}
+    .foot-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+    .foot-links a{font-size:0.83rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.15s;font-weight:400}
+    .foot-links a:hover{color:rgba(255,255,255,0.8);text-decoration:none}
+    .foot-legal{font-size:0.75rem;color:rgba(255,255,255,0.2);border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;margin-top:8px}
+    @media(max-width:600px){.page-hero{padding:88px 20px 44px}.page-body{padding:40px 20px 72px}nav{padding:0 20px}footer{padding:40px 20px}.foot-grid{grid-template-columns:1fr;gap:24px}}
+  </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-in">
-    <a href="/" class="nav-logo">
-      <img src="/images/logo.png" alt="Laatuhieronta">
-    </a>
-    <ul class="nav-links">
-      <li><a href="/lisatietoa/">Lisätietoa</a></li>
-      <li><a href="/omavalvonta/jarjestelma/">Järjestelmä</a></li>
-      <li><a href="/tietoa/">Tietoa</a></li>
-    </ul>
+    <a href="/" class="nav-logo">Laatuhieronta.fi</a>
+    <a href="/" class="nav-back">← Etusivu</a>
   </div>
 </nav>
 
-<main>
+<header class="page-hero">
+  <div class="page-hero-in">
+    <div class="eyebrow">Dokumentointi</div>
+    <h1>Omavalvontasuunnitelma — mitä siinä pitää olla</h1>
+    <p class="page-lead">Laki edellyttää kirjallista suunnitelmaa. Lupa- ja valvontavirasto on täsmentänyt mitä se sisältää. Hyvä uutinen: se on paljon lyhyempi ja selkeämpi kuin moni odottaa.</p>
+  </div>
+</header>
 
-<h1>Omavalvontasuunnitelma</h1>
+<div class="page-body">
 
-<p>
-  Omavalvontasuunnitelma on kirjallinen kuvaus siitä, miten toiminta
-  on järjestetty laadun ja turvallisuuden varmistamiseksi.
-</p>
+  <h2>Viisi osa-aluetta joista suunnitelma rakentuu</h2>
 
-<p>
-  Se ei ole täytettävä lomake eikä viranomaishakemus.
-  Se on rakenteellinen asiakirja, joka tekee näkyväksi sen,
-  miten ammattihenkilö hallitsee omaa toimintaansa.
-</p>
+  <div class="dark-box">
+    <div class="dark-box-label">Suunnitelman rakenne</div>
+    <ol>
+      <li><strong>Toiminnan kuvaus</strong> — mitä teet, kenelle, missä ja millä rajauksilla</li>
+      <li><strong>Vastuut</strong> — kuka vastaa mistäkin. Yksinyrittäjällä tämä on selkeä.</li>
+      <li><strong>Riskienhallinta</strong> — mitkä tilanteet ovat riskejä ja miten niihin varaudutaan</li>
+      <li><strong>Poikkeamien käsittely</strong> — prosessi kun jokin menee pieleen</li>
+      <li><strong>Kirjaamiskäytännöt</strong> — mitä kirjataan, milloin ja miksi</li>
+    </ol>
+  </div>
 
-<h2>Suunnitelman viisi osa-aluetta</h2>
+  <h2>Mitä lupa- ja valvontavirasto edellyttää</h2>
 
-<p>Omavalvontasuunnitelma rakentuu viidestä osa-alueesta:</p>
+  <p>Määräys 1/2024 listaa kahdeksan pakollista kohtaa. Huomaa: yksinyrittäjä voi dokumentoida nämä <strong>lyhyesti ja ytimekkäästi</strong>. Pituus ei ole vaatimus — kattavuus on.</p>
 
-<ol>
-  <li>
-    <strong>Toiminnan kuvaus</strong> — mitä palveluja tarjotaan, kenelle,
-    missä ja millä rajauksilla. Tämä on suunnitelman perusta.
-  </li>
-  <li>
-    <strong>Vastuut</strong> — kuka vastaa mistäkin toiminnan osa-alueesta.
-    Yksintoimivalla hierojalla vastuu on selkeästi yksi henkilö.
-  </li>
-  <li>
-    <strong>Riskienhallinta</strong> — mitkä tilanteet tunnistetaan riskeiksi
-    ja miten niihin varaudutaan ennakoivasti.
-  </li>
-  <li>
-    <strong>Poikkeamien käsittely</strong> — miten toimitaan, kun jokin
-    menee suunnitelmasta poikkeavasti. Prosessi, ei pelkkä kirjaus.
-  </li>
-  <li>
-    <strong>Kirjaamiskäytännöt</strong> — mitä kirjataan, milloin ja miksi.
-    Selkeä rajaus ehkäisee sekä alikirjaamisen että ylidokumentoinnin.
-  </li>
-</ol>
+  <ol>
+    <li>Palveluntuottajan perustiedot ja toiminnan kuvaus</li>
+    <li>Vastuuhenkilö ja vastuunjako</li>
+    <li>Henkilöstön osaamisen varmistaminen</li>
+    <li>Asiakasturvallisuuden varmistaminen</li>
+    <li>Riskienhallinta</li>
+    <li>Poikkeamien käsittely ja korjaavat toimenpiteet</li>
+    <li>Asiakaspalaute ja sen hyödyntäminen</li>
+    <li>Suunnitelman päivittäminen</li>
+  </ol>
 
-<h2>Mitä lupa- ja valvontavirasto edellyttää</h2>
+  <h2>Viisi yleisintä virhettä</h2>
 
-<p>
-  Lupa- ja valvontaviraston määräys 1/2024 täsmentää omavalvontasuunnitelman
-  sisältövaatimukset yksityisille terveydenhuollon palveluntuottajille.
-</p>
+  <ul class="mistake-list">
+    <li>
+      <strong>Kopioidaan pohja täyttämättä sitä oikeasti</strong>
+      Suunnitelma kuvaa yleistä toimintamallia, ei sinun todellista toimintaasi. Viranomainen tunnistaa tämän välittömästi.
+    </li>
+    <li>
+      <strong>Suunnitelmaa ei päivitetä toiminnan muuttuessa</strong>
+      Palveluvalikoima vaihtuu, toimitila muuttuu — mutta suunnitelma kuvaa vanhaa tilannetta.
+    </li>
+    <li>
+      <strong>Vastuuhenkilö on nimetty mutta vastuut ovat epäselvät</strong>
+      Nimi on paperilla. Mutta mitä hän vastaa? Suunnitelmaan kuuluu konkreettinen kuvaus.
+    </li>
+    <li>
+      <strong>Poikkeamia ei kirjata lainkaan</strong>
+      Poikkeamien käsittely on yksi ydinalueista. Sen puuttuminen tekee suunnitelmasta rakenteellisesti vajaan.
+    </li>
+    <li>
+      <strong>Suunnitelma on arkistoitu eikä sitä käytetä</strong>
+      Omavalvonnan arvo syntyy siitä, että se elää toiminnan mukana — ei arkiston pohjalla.
+    </li>
+  </ul>
 
-<p>Suunnitelmassa tulee olla:</p>
+  <div class="hl-box">
+    <p><strong>Lyhyt, tosi ja rakenteellinen kestää tarkastelun. Pitkä, geneerinen ja kopioitu ei kestä.</strong></p>
+  </div>
 
-<ol>
-  <li>Palveluntuottajan perustiedot ja toiminnan kuvaus</li>
-  <li>Vastuuhenkilö ja vastuunjako</li>
-  <li>Henkilöstön osaamisen varmistaminen</li>
-  <li>Asiakasturvallisuuden varmistaminen</li>
-  <li>Riskienhallinta</li>
-  <li>Poikkeamien käsittely ja korjaavat toimenpiteet</li>
-  <li>Asiakaspalaute ja sen hyödyntäminen</li>
-  <li>Suunnitelman päivittäminen</li>
-</ol>
+  <div class="cta-row">
+    <a href="/omavalvonta/jarjestelma/" class="btn-grad">Valmis omavalvontajärjestelmä →</a>
+    <a href="/lisatietoa/paivittaminen/" class="btn-outline">Milloin suunnitelma päivitetään</a>
+  </div>
 
-<p>
-  Huomaa: pienimuotoinen yksintoimiva ammatinharjoittaja voi dokumentoida nämä
-  lyhyesti ja ytimekkäästi. Pituus ei ole vaatimus — kattavuus on.
-</p>
+</div>
 
-<h2>Viisi yleisintä virhettä</h2>
-
-<p>
-  Omavalvontasuunnitelmissa toistuvat samat ongelmat. Tässä ne viisi yleisintä:
-</p>
-
-<p>
-  <strong>1. Kopioidaan valmis pohja täyttämättä sitä oikeasti.</strong><br>
-  Suunnitelma näyttää valmiilta, mutta kuvaa yleistä toimintamallia
-  eikä omaa todellista toimintaa. Viranomainen tunnistaa tämän välittömästi.
-</p>
-
-<p>
-  <strong>2. Suunnitelmaa ei päivitetä toiminnan muuttuessa.</strong><br>
-  Palveluvalikoima laajenee, toimintaympäristö vaihtuu tai vastuut muuttuvat —
-  mutta suunnitelma kuvaa edelleen vanhaa tilannetta.
-  Vanhentunut suunnitelma on lähes yhtä ongelmallinen kuin ei suunnitelmaa lainkaan.
-</p>
-
-<p>
-  <strong>3. Vastuuhenkilö on nimetty mutta vastuut ovat epäselvät.</strong><br>
-  Nimi on paperilla, mutta mitä hän vastaa? Suunnitelmassa pitää olla
-  konkreettinen kuvaus vastuiden sisällöstä.
-</p>
-
-<p>
-  <strong>4. Poikkeamia ei kirjata lainkaan.</strong><br>
-  Poikkeamien käsittely on yksi suunnitelman ydinalueista.
-  Jos kirjaaminen puuttuu kokonaan, suunnitelma on rakenteellisesti vajaa —
-  vaikka muuten se olisi hyvin tehty.
-</p>
-
-<p>
-  <strong>5. Suunnitelma on irrallaan arjesta.</strong><br>
-  Suunnitelma on laadittu kerran, arkistoitu ja unohdettu.
-  Omavalvonnan arvo syntyy siitä, että rakenne elää toiminnan mukana.
-</p>
-
-<h2>Hyvä suunnitelma on lyhyt ja tosi</h2>
-
-<p>
-  Paras omavalvontasuunnitelma on se, joka kuvaa täsmällisesti
-  juuri sinun toimintaasi — ei yleistä hierontaa eikä kuvitteellista
-  ideaalitoimintaa.
-</p>
-
-<p>
-  Lyhyt, tosi ja rakenteellinen suunnitelma kestää tarkastelun.
-  Pitkä, geneerinen ja kopio ei kestä.
-</p>
-
-<p>
-  <a href="/lisatietoa/omavalvonta/">→ Mitä omavalvonta on</a><br>
-  <a href="/lisatietoa/paivittaminen/">→ Päivittäminen ja dokumentointi</a><br>
-  <a href="/omavalvonta/jarjestelma/">→ Tuotesivu: valmis omavalvontajärjestelmä</a><br>
-  <a href="/lisatietoa/">← Palaa lisätietoon</a>
-</p>
-
-</main>
-
-<p style="margin:16px 0 0;font-size:13px;">
-  <a href="#" id="analytics-reset">Muuta analytiikkavalintaa</a>
-</p>
+<footer>
+  <div class="foot-in">
+    <a href="/" class="foot-logo">Laatuhieronta.fi</a>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-sec-title">Sisältö</div>
+        <ul class="foot-links">
+          <li><a href="/lisatietoa/omavalvonta/">Mitä omavalvonta on</a></li>
+          <li><a href="/lisatietoa/suunnitelma/">Omavalvontasuunnitelma</a></li>
+          <li><a href="/lisatietoa/paivittaminen/">Päivittäminen</a></li>
+          <li><a href="/lisatietoa/vastuu/">Laatu ja vastuu</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-sec-title">Muut</div>
+        <ul class="foot-links">
+          <li><a href="/omavalvonta/jarjestelma/">Omavalvontajärjestelmä</a></li>
+          <li><a href="/sivustosta/">Sivustosta</a></li>
+          <li><a href="mailto:info@laatuhieronta.fi">info@laatuhieronta.fi</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-legal">© 2026 Fiksiribu</p>
+  </div>
+</footer>
 
 <div id="analytics-consent" style="display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:480px;margin:0 auto;padding:12px 14px;border:1px solid #d4d4d4;border-radius:10px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.12);font:14px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#111;">
   <strong style="display:block;margin:0 0 6px;">Analytiikka</strong>
-  <p style="margin:0 0 10px;">Tällä sivustolla voidaan käyttää kevyttä analytiikkaa käytön ymmärtämiseen ja hankintapolun parantamiseen.</p>
+  <p style="margin:0 0 10px;">Tällä sivustolla voidaan käyttää kevyttä analytiikkaa käytön ymmärtämiseen ja palvelun kehittämiseen.</p>
   <div style="display:flex;gap:8px;flex-wrap:wrap;">
     <button id="analytics-accept" type="button" style="border:0;border-radius:8px;padding:8px 10px;background:#111;color:#fff;cursor:pointer;">Hyväksy analytiikka</button>
     <button id="analytics-decline" type="button" style="border:1px solid #b9b9b9;border-radius:8px;padding:8px 10px;background:#fff;color:#111;cursor:pointer;">Jatka ilman analytiikkaa</button>

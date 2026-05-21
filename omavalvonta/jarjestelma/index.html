@@ -1,11 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omavalvontajärjestelmä koulutetulle hierojalle</title>
+  <title>Omavalvontajärjestelmä – valmis rakenne sote-alan ammattilaiselle | Laatuhieronta.fi</title>
+  <meta name="description" content="Valmis omavalvonnan dokumentointirakenne sote-alan itsenäiselle ammattilaiselle. Kertaluonteinen hankinta. Täytät omilla tiedoillasi — velvoite on hoidettu.">
   <link rel="canonical" href="https://laatuhieronta.fi/omavalvonta/jarjestelma/">
-  <link rel="stylesheet" href="/style.css?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -14,316 +17,187 @@
         "@type": "WebPage",
         "@id": "https://laatuhieronta.fi/omavalvonta/jarjestelma/#webpage",
         "url": "https://laatuhieronta.fi/omavalvonta/jarjestelma/",
-        "name": "Omavalvontajärjestelmä koulutetulle hierojalle",
+        "name": "Omavalvontajärjestelmä – valmis rakenne sote-alan ammattilaiselle",
         "inLanguage": "fi",
-        "isPartOf": {
-          "@id": "https://laatuhieronta.fi/#website"
-        },
-        "publisher": {
-          "@id": "https://laatuhieronta.fi/#organization"
-        },
-        "about": {
-          "@id": "https://laatuhieronta.fi/#organization"
-        },
-        "mainEntity": {
-          "@id": "https://laatuhieronta.fi/omavalvonta/jarjestelma/#product"
-        }
+        "isPartOf": { "@id": "https://laatuhieronta.fi/#website" }
       },
       {
         "@type": "Product",
         "@id": "https://laatuhieronta.fi/omavalvonta/jarjestelma/#product",
         "name": "Omavalvontajärjestelmä",
-        "description": "Omavalvonnan dokumentointirakenne koulutetulle hierojalle. Kokonaisuus jäsentää vastuun kohdentumista, kirjaamisen periaatteita ja toiminnan rakenteita.",
+        "description": "Valmis omavalvonnan dokumentointirakenne sote-alan itsenäiselle ammattilaiselle.",
         "url": "https://laatuhieronta.fi/omavalvonta/jarjestelma/",
-        "brand": {
-          "@id": "https://laatuhieronta.fi/#organization"
-        },
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Koulutettu hieroja"
-        },
-        "additionalProperty": [
-          {
-            "@type": "PropertyValue",
-            "name": "Tuotetyyppi",
-            "value": "Omavalvonnan dokumentointirakenne"
-          },
-          {
-            "@type": "PropertyValue",
-            "name": "NFC-yhteensopivuus",
-            "value": "Rakenteeseen voidaan liittää NFC-tunniste käytön ankkurointiin."
-          }
-        ]
+        "brand": { "@id": "https://laatuhieronta.fi/#organization" }
       }
     ]
   }
   </script>
+  <style>
+    :root{--bg:#f9f7ff;--white:#ffffff;--purple:#8c52ff;--purple-dark:#7540e8;--purple-tint:#f0ebff;--teal:#0cc0df;--grad:linear-gradient(135deg,#8c52ff 0%,#5ce1e6 100%);--text:#19141f;--muted:#655b78;--border:#ddd6f8;--radius:6px;--max:720px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{font-size:16px;scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'Bricolage Grotesque',sans-serif;font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 32px}
+    .nav-in{max-width:var(--max);margin:0 auto;height:58px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;text-decoration:none;letter-spacing:-0.02em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-back{color:var(--muted);font-size:0.875rem;text-decoration:none;transition:color 0.15s}
+    .nav-back:hover{color:var(--text)}
+    .page-hero{padding:104px 32px 56px;background:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(140,82,255,0.07) 0%,transparent 70%),var(--white);border-bottom:1px solid var(--border)}
+    .page-hero-in{max-width:var(--max);margin:0 auto}
+    .eyebrow{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+    h1{font-family:'Fraunces',serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;line-height:1.1;letter-spacing:-0.03em;color:var(--text);margin-bottom:16px}
+    .page-lead{font-size:1.05rem;color:var(--muted);line-height:1.7;max-width:560px}
+    .page-body{max-width:var(--max);margin:0 auto;padding:56px 32px 96px}
+    h2{font-family:'Fraunces',serif;font-size:clamp(1.25rem,2.5vw,1.6rem);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:var(--text);margin-top:2.5rem;margin-bottom:0.75rem}
+    p{color:var(--muted);margin-bottom:1rem;font-size:1rem;line-height:1.7}
+    p strong{color:var(--text)}
+    ul,ol{color:var(--muted);margin-bottom:1rem;padding-left:1.4rem}
+    li{margin-bottom:0.4rem;font-size:1rem;line-height:1.65}
+    a{color:var(--purple);text-decoration:none;font-weight:500}
+    a:hover{text-decoration:underline}
+    .hl-box{margin:2rem 0;padding:1.25rem 1.5rem;background:var(--purple-tint);border:1px solid var(--border);border-left:3px solid var(--purple);border-radius:var(--radius)}
+    .hl-box p{margin:0;font-size:0.95rem}
+    .dark-box{margin:2rem 0;padding:1.5rem 1.75rem;background:#0f0d18;border-radius:10px;position:relative;overflow:hidden}
+    .dark-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
+    .dark-box-label{font-size:0.65rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:12px}
+    .dark-box p,.dark-box li{color:rgba(255,255,255,0.7)}
+    .dark-box strong{color:#fff}
+    .dark-box ul,.dark-box ol{margin-bottom:0;padding-left:1.2rem}
+    .dark-box li{margin-bottom:0.6rem}
+    .incl-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:10px;margin-bottom:0}
+    .incl-list li{display:flex;align-items:flex-start;gap:10px;font-size:0.9rem;color:rgba(255,255,255,0.75)}
+    .incl-check{color:#5ce1e6;font-weight:700;flex-shrink:0;margin-top:1px}
+    .price-box{margin:2rem 0;padding:1.75rem;background:var(--white);border:2px solid var(--purple);border-radius:10px;position:relative;overflow:hidden}
+    .price-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
+    .price-label{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+    .price-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--text);line-height:1;margin-bottom:6px}
+    .price-note{font-size:0.83rem;color:var(--muted);margin-bottom:20px}
+    .btn-buy{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;padding:14px 28px;border-radius:var(--radius);font-weight:600;font-size:0.95rem;text-decoration:none;transition:opacity 0.15s}
+    .btn-buy:hover{opacity:0.85;text-decoration:none}
+    .cta-row{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);display:flex;gap:12px;flex-wrap:wrap}
+    .btn-grad{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;padding:12px 22px;border-radius:var(--radius);font-weight:600;font-size:0.9rem;text-decoration:none;transition:opacity 0.15s}
+    .btn-grad:hover{opacity:0.85;text-decoration:none}
+    .btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);padding:12px 22px;border-radius:var(--radius);border:1px solid var(--border);font-size:0.9rem;text-decoration:none;transition:border-color 0.15s}
+    .btn-outline:hover{border-color:var(--purple);color:var(--purple);text-decoration:none}
+    footer{background:#0f0d18;border-top:1px solid rgba(255,255,255,0.06);padding:48px 32px}
+    .foot-in{max-width:var(--max);margin:0 auto}
+    .foot-logo{font-family:'Fraunces',serif;font-size:0.95rem;font-weight:500;text-decoration:none;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:28px}
+    .foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:28px}
+    .foot-sec-title{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:12px}
+    .foot-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+    .foot-links a{font-size:0.83rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.15s;font-weight:400}
+    .foot-links a:hover{color:rgba(255,255,255,0.8);text-decoration:none}
+    .foot-legal{font-size:0.75rem;color:rgba(255,255,255,0.2);border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;margin-top:8px}
+    @media(max-width:600px){.page-hero{padding:88px 20px 44px}.page-body{padding:40px 20px 72px}nav{padding:0 20px}footer{padding:40px 20px}.foot-grid{grid-template-columns:1fr;gap:24px}}
+  </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-in">
-    <a href="/" class="nav-logo">
-      <img src="/images/logo.png" alt="Laatuhieronta">
-    </a>
-    <ul class="nav-links">
-      <li><a href="/">Etusivu</a></li>
-      <li><a href="/lisatietoa/">Lisätietoa</a></li>
-      <li><a href="/tietoa/">Tietoa</a></li>
-    </ul>
+    <a href="/" class="nav-logo">Laatuhieronta.fi</a>
+    <a href="/" class="nav-back">← Etusivu</a>
   </div>
 </nav>
 
-<main>
+<header class="page-hero">
+  <div class="page-hero-in">
+    <div class="eyebrow">Tuote</div>
+    <h1>Valmis omavalvontarakenne — täytät kerran, velvoite on hoidettu</h1>
+    <p class="page-lead">Jäsennelty dokumentointirakenne sote-alan itsenäiselle ammattilaiselle. Ei tyhjää paperia, ei arvailua — vain selkeä pohja, jonka täytät omilla tiedoillasi.</p>
+  </div>
+</header>
 
-  <h1>Omavalvontajärjestelmä koulutetulle hierojalle</h1>
-
-  <p>
-    Tämä kokonaisuus on omavalvonnan dokumentointirakenne,
-    joka tukee koulutetun hierojan omaa työtä.
-  </p>
-
-  <p>
-    Sen tarkoitus ei ole lisätä velvoitteita,
-    vaan tehdä toiminnan rajaukset, vastuun kohdentuminen
-    ja kirjaamisen periaatteet selkeiksi.
-  </p>
-
-  <p>
-    Kyse ei ole uudesta toimintamallista,
-    vaan jäsennellystä tavasta kuvata jo olemassa oleva vastuu.
-  </p>
-
-  <h2>Mikä tämä on</h2>
-
-  <p>
-    Tämä on omavalvonnan kirjaamista varten suunniteltu rakenne.
-  </p>
-
-  <p>Sen tarkoitus on:</p>
-  <ul>
-    <li>tehdä vastuun rajat näkyviksi</li>
-    <li>selkeyttää mitä seurataan ja miksi</li>
-    <li>määrittää milloin kirjaamista tarvitaan</li>
-  </ul>
-
-  <p>Rakenne ei muuta toimintaa.</p>
-  <p>Se tekee siitä ymmärrettävämpää ja arvioitavaa.</p>
-
-  <h2>Miksi tämä on erillinen kokonaisuus</h2>
-
-  <p>Omavalvonta sekoitetaan usein:</p>
-  <ul>
-    <li>asiakirjoihin</li>
-    <li>raportointiin</li>
-    <li>yksittäisiin käytäntöihin</li>
-  </ul>
-
-  <p>
-    Tässä kokonaisuudessa omavalvonta nähdään rakenteena, ei tekstinä.
-  </p>
-
-  <p>Kun rakenne on selkeä:</p>
-  <ul>
-    <li>kirjaaminen ei laajene hallitsemattomasti</li>
-    <li>vastuu pysyy ymmärrettävänä</li>
-    <li>kokonaisuus on hahmotettavissa myös ulkopuolelta</li>
-  </ul>
-
-  <h2>Kenelle tämä on</h2>
-
-  <p>Rakenne on tarkoitettu tilanteisiin, joissa:</p>
-  <ul>
-    <li>toiminta on pienimuotoista</li>
-    <li>vastuu kohdentuu suoraan toimijaan</li>
-    <li>hallintajärjestelmää ei ole erikseen</li>
-  </ul>
-
-  <p>
-    Se soveltuu erityisesti koulutetuille hierojille,
-    jotka toimivat itsenäisesti.
-  </p>
-
-  <h2>Kenelle tämä ei ole</h2>
-
-  <p>Tämä kokonaisuus ei ole tarkoitettu tilanteisiin, joissa:</p>
-  <ul>
-    <li>toiminta on laajaa tai organisoitua</li>
-    <li>vastuu jakautuu usealle toimijalle</li>
-    <li>käytössä on erillinen hallintajärjestelmä</li>
-  </ul>
-
-  <p>Se ei korvaa organisaatiotason omavalvontaa.</p>
-
-  <h2>Mitä tämä tekee</h2>
-
-  <p>Dokumentaatiotakenteena se:</p>
-  <ul>
-    <li>jäsentää kirjaamisen periaatteet</li>
-    <li>määrittää dokumentoinnin rajat</li>
-    <li>muodostaa kokonaiskuvan omavalvonnasta</li>
-    <li>tukee toiminnan läpinäkyvyyttä</li>
-  </ul>
-
-  <p>
-    Se tekee toiminnasta arvioitavaa ilman ylimääräistä raportointia.
-  </p>
-
-  <h2>Mitä tämä ei tee</h2>
-
-  <p>Dokumentaatiotakenteena se ei:</p>
-  <ul>
-    <li>tee päätöksiä toimijan puolesta</li>
-    <li>muuta ammattivastuuta</li>
-    <li>automatisoi toimintaa</li>
-    <li>edellytä jatkuvaa käyttöä</li>
-  </ul>
-
-  <p>Se ei lisää velvoitteita, vaan selkeyttää niitä.</p>
-
-  <h2>Miten tätä käytetään</h2>
-
-  <p>
-    Rakennetta käytetään tilanteissa, joissa kirjaaminen on tarpeen.
-  </p>
-
-  <p>Tällaisia ovat esimerkiksi:</p>
-  <ul>
-    <li>toiminnan muutokset</li>
-    <li>poikkeamat</li>
-    <li>rakenteiden tarkistaminen</li>
-  </ul>
-
-  <p>
-    Hiljainen omavalvonta tarkoittaa, että toiminta on vakiintunutta
-    eikä jatkuvaa kirjaamista tarvita.
-  </p>
-
-  <h2>Tekninen toteutus</h2>
-
-  <p>
-    Kokonaisuus toimitetaan digitaalisena rakenteellisena pohjana,
-    joka täytetään käyttäjän omilla tiedoilla.
-  </p>
-
-  <p>
-    Järjestelmä ei sisällä valmista sisältöä,
-    vaan tarjoaa jäsennellyn rakenteen,
-    jonka tarkoitus on auttaa kuvaamaan oma toiminta selkeästi.
-  </p>
-
-  <p>Se sisältää:</p>
-  <ul>
-    <li>valmiin rakenteen omavalvonnan jäsentämiseen</li>
-    <li>otsikot ja kentät kirjaamista varten</li>
-    <li>ohjetekstit, jotka auttavat kuvaamaan toimintaa omin sanoin</li>
-  </ul>
-
-  <p>
-    Järjestelmä tulee käyttökelpoiseksi vasta,
-    kun käyttäjä on täyttänyt sen omilla tiedoillaan.
-  </p>
-
-  <p>Erillistä ohjelmistoa ei tarvita.</p>
+<div class="page-body">
 
   <h2>Mitä saat</h2>
 
-  <p>Kokonaisuus sisältää:</p>
+  <div class="dark-box">
+    <div class="dark-box-label">Sisältö</div>
+    <ul class="incl-list">
+      <li><span class="incl-check">✓</span> Valmis omavalvontasuunnitelman rakenne — kaikki Lupa- ja valvontaviraston edellyttämät kohdat</li>
+      <li><span class="incl-check">✓</span> Ohjetekstit jokaiseen kohtaan — selkeällä suomella, ei lakijargonilla</li>
+      <li><span class="incl-check">✓</span> Poikkeamien kirjaamismalli aikaleimalla</li>
+      <li><span class="incl-check">✓</span> Selkeä rakenne vastuiden ja käytäntöjen kuvaamiseen</li>
+      <li><span class="incl-check">✓</span> Käyttöoikeus muokata rakennetta omaan toimintaan sopivaksi</li>
+    </ul>
+  </div>
+
+  <h2>Kenelle tämä sopii</h2>
+
+  <p>Rakenne on suunniteltu tilanteisiin joissa toiminta on pienimuotoista ja vastuu kohdentuu suoraan toimijaan itsellensä. Se sopii erityisesti:</p>
+
   <ul>
-    <li>jäsennellyn omavalvonnan dokumentointirakenteen</li>
-    <li>selkeän mallin kirjaamistilanteisiin</li>
-    <li>kokonaiskuvan vastuun rakenteesta</li>
+    <li>Hierojat, kosmetologit, jalkahoitajat</li>
+    <li>Fysioterapeutit, toimintaterapeutit</li>
+    <li>Psykologit ja terapeutit yksityisellä vastaanotolla</li>
+    <li>Muut sote-alan itsenäiset ammatinharjoittajat</li>
   </ul>
 
-  <p>Se tukee toiminnan hallintaa arjessa.</p>
+  <div class="hl-box">
+    <p>Rakenne ei sovi organisaatiotason omavalvontaan, jossa vastuu jakautuu usealle henkilölle tai käytössä on erillinen hallintajärjestelmä.</p>
+  </div>
 
-  <h2>Hinta ja käyttöoikeus</h2>
+  <h2>Miten se toimii</h2>
 
-  <p>Käyttöoikeus hankitaan kertaluonteisesti.</p>
-  <p>Ajantasainen hinta näkyy Holvi-kaupassa.</p>
+  <p>Saat digitaalisen rakenteen, jonka täytät kerran omilla tiedoillasi. Rakenne ei sisällä valmista sisältöä — se tarjoaa jäsennellyn pohjan, joka ohjaa kuvaamaan oman toimintasi selkeästi.</p>
 
-  <p>Käyttöoikeus sisältää:</p>
+  <p>Kun rakenne on täytetty:</p>
+
   <ul>
-    <li>oikeuden käyttää rakennetta omassa toiminnassa</li>
-    <li>oikeuden muokata sitä tarpeen mukaan</li>
+    <li><strong>Omavalvontasuunnitelma on dokumentoitu</strong> lain edellyttämällä tavalla</li>
+    <li><strong>Vastuut ja käytännöt</strong> ovat selkeästi kirjattu</li>
+    <li><strong>Poikkeamatilanteet</strong> voidaan kirjata rakenteen mukaisesti</li>
+    <li><strong>Päivittäminen</strong> on helppoa — muutat vain muuttuneen kohdan</li>
   </ul>
 
-  <p>Se ei sisällä käyttövelvoitetta.</p>
+  <p>Erillistä ohjelmistoa ei tarvita. Rakenne toimii selaimessa.</p>
 
-  <p>
-    Tuotteen käyttöönotto:
-    <a href="https://holvi.com/shop/vinokasvi/product/19a59b12dfd7658fbb6f0859611d3b1b/">Osta käyttöoikeus</a><br>
-    Vaihtoehtoisesti voit siirtyä Laatuhieronnan verkkokaupan etusivulle:
-    <a href="https://holvi.com/shop/vinokasvi/">Laatuhieronnan verkkokauppa</a>
-  </p>
+  <h2>Hinta ja hankinta</h2>
 
-  <h2>Fyysinen ankkurointi (NFC-tunnisteen liittäminen)</h2>
+  <div class="price-box">
+    <div class="price-label">Kertaluonteinen hankinta</div>
+    <div class="price-num">Katso hinta →</div>
+    <p class="price-note">Ei kuukausimaksua. Ei sitoutumista. Käyttöoikeus sisältää oikeuden muokata rakennetta omaan toimintaan sopivaksi.</p>
+    <a href="https://holvi.com/shop/vinokasvi/product/19a59b12dfd7658fbb6f0859611d3b1b/" class="btn-buy" target="_blank" rel="noopener">Osta käyttöoikeus Holvi-kaupassa →</a>
+  </div>
 
-  <h2>Miten järjestelmä kytkeytyy toimintaan</h2>
+  <div class="cta-row">
+    <a href="/lisatietoa/omavalvonta/" class="btn-outline">Mitä omavalvonta tarkoittaa</a>
+    <a href="/lisatietoa/suunnitelma/" class="btn-outline">Suunnitelman sisältö</a>
+  </div>
 
-  <p>
-    Omavalvontajärjestelmä voidaan liittää konkreettisesti toimintaan
-    NFC-tunnisteen avulla.
-    Tunniste toimii käytännöllisenä avaimena dokumentointirakenteeseen.
-  </p>
+</div>
 
-  <p>
-    Se ei muuta toimintaa,
-    vaan tekee rakenteen helposti saavutettavaksi.
-  </p>
-
-  <h2>Mitä NFC tekee</h2>
-
-  <p>Tunniste:</p>
-  <ul>
-    <li>yhdistää toiminnan dokumentointirakenteeseen</li>
-    <li>varmistaa että omavalvonta on saatavilla tarvittaessa</li>
-    <li>mahdollistaa nopean pääsyn oikeaan sisältöön</li>
-  </ul>
-
-  <p>Se ei kerää tietoa eikä seuraa käyttöä.</p>
-
-  <h2>Mihin NFC soveltuu</h2>
-
-  <p>Tunnistetta voidaan käyttää tilanteissa, joissa:</p>
-  <ul>
-    <li>dokumentointi tulee olla helposti löydettävissä</li>
-    <li>toiminta tapahtuu eri paikoissa</li>
-    <li>kokonaisuus halutaan ankkuroida konkreettisesti</li>
-  </ul>
-
-  <p>Se toimii muistuttavana ja rakenteellisena elementtinä.</p>
-
-  <h2>Fyysisen ankkuroinnin tarkoitus</h2>
-
-  <p>Ankkuroinnin tarkoitus on:</p>
-  <ul>
-    <li>tehdä rakenne näkyväksi</li>
-    <li>varmistaa saavutettavuus</li>
-    <li>tukea vastuun ennakoivaa määrittelyä</li>
-  </ul>
-
-  <p>Se ei lisää toimintaa eikä muuta sitä.</p>
-
-  <p>
-    <strong>Epävarma?</strong> <a href="https://tally.so/r/QKAr9A">Varaa 30min esittely</a>
-  </p>
-
-  <p>
-    <a href="/tietoa/">→ Lue lisää palvelusta</a><br>
-    <a href="/lisatietoa/vastuu/">→ Laatu ja vastuu</a><br>
-    <a href="/lisatietoa/">← Lisätietoa</a>
-  </p>
-
-</main>
-
-<p style="margin:16px 0 0;font-size:13px;">
-  <a href="#" id="analytics-reset">Muuta analytiikkavalintaa</a>
-</p>
+<footer>
+  <div class="foot-in">
+    <a href="/" class="foot-logo">Laatuhieronta.fi</a>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-sec-title">Sisältö</div>
+        <ul class="foot-links">
+          <li><a href="/lisatietoa/omavalvonta/">Mitä omavalvonta on</a></li>
+          <li><a href="/lisatietoa/suunnitelma/">Omavalvontasuunnitelma</a></li>
+          <li><a href="/lisatietoa/paivittaminen/">Päivittäminen</a></li>
+          <li><a href="/lisatietoa/vastuu/">Laatu ja vastuu</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-sec-title">Muut</div>
+        <ul class="foot-links">
+          <li><a href="/omavalvonta/jarjestelma/">Omavalvontajärjestelmä</a></li>
+          <li><a href="/sivustosta/">Sivustosta</a></li>
+          <li><a href="mailto:info@laatuhieronta.fi">info@laatuhieronta.fi</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-legal">© 2026 Fiksiribu</p>
+  </div>
+</footer>
 
 <div id="analytics-consent" style="display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:480px;margin:0 auto;padding:12px 14px;border:1px solid #d4d4d4;border-radius:10px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.12);font:14px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#111;">
   <strong style="display:block;margin:0 0 6px;">Analytiikka</strong>
-  <p style="margin:0 0 10px;">Tällä sivustolla voidaan käyttää kevyttä analytiikkaa käytön ymmärtämiseen ja hankintapolun parantamiseen.</p>
+  <p style="margin:0 0 10px;">Tällä sivustolla voidaan käyttää kevyttä analytiikkaa käytön ymmärtämiseen ja palvelun kehittämiseen.</p>
   <div style="display:flex;gap:8px;flex-wrap:wrap;">
     <button id="analytics-accept" type="button" style="border:0;border-radius:8px;padding:8px 10px;background:#111;color:#fff;cursor:pointer;">Hyväksy analytiikka</button>
     <button id="analytics-decline" type="button" style="border:1px solid #b9b9b9;border-radius:8px;padding:8px 10px;background:#fff;color:#111;cursor:pointer;">Jatka ilman analytiikkaa</button>

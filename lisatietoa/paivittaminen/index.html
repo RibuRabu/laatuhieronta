@@ -3,174 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omavalvonnan päivittäminen ja dokumentointi | Laatuhieronta</title>
-  <meta name="description" content="Omavalvontaa ei päivitetä kalenterin mukaan vaan toiminnan muutosten mukaan. Lue milloin päivitys on tarpeen ja milloin dokumentointi kääntyy itseään vastaan.">
+  <title>Omavalvonnan päivittäminen – milloin ja milloin ei | Laatuhieronta.fi</title>
+  <meta name="description" content="Omavalvontaa ei päivitetä kalenterin mukaan — vain kun toiminta muuttuu. Lue milloin päivitys tarvitaan ja milloin liiallinen dokumentointi kääntyy itseään vastaan.">
   <link rel="canonical" href="https://laatuhieronta.fi/lisatietoa/paivittaminen/">
-  <link rel="stylesheet" href="/style.css?v=3">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://laatuhieronta.fi/lisatietoa/paivittaminen/#webpage",
-    "url": "https://laatuhieronta.fi/lisatietoa/paivittaminen/",
-    "name": "Omavalvonnan päivittäminen ja dokumentointi",
-    "inLanguage": "fi",
-    "isPartOf": { "@id": "https://laatuhieronta.fi/#website" },
-    "publisher": { "@id": "https://laatuhieronta.fi/#organization" }
-  }
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f9f7ff;--white:#ffffff;--purple:#8c52ff;--purple-dark:#7540e8;--purple-tint:#f0ebff;--teal:#0cc0df;--grad:linear-gradient(135deg,#8c52ff 0%,#5ce1e6 100%);--text:#19141f;--muted:#655b78;--border:#ddd6f8;--radius:6px;--max:720px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{font-size:16px;scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'Bricolage Grotesque',sans-serif;font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 32px}
+    .nav-in{max-width:var(--max);margin:0 auto;height:58px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;text-decoration:none;letter-spacing:-0.02em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-back{color:var(--muted);font-size:0.875rem;text-decoration:none;transition:color 0.15s}
+    .nav-back:hover{color:var(--text)}
+    .page-hero{padding:104px 32px 56px;background:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(140,82,255,0.07) 0%,transparent 70%),var(--white);border-bottom:1px solid var(--border)}
+    .page-hero-in{max-width:var(--max);margin:0 auto}
+    .eyebrow{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+    h1{font-family:'Fraunces',serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;line-height:1.1;letter-spacing:-0.03em;color:var(--text);margin-bottom:16px}
+    .page-lead{font-size:1.05rem;color:var(--muted);line-height:1.7;max-width:560px}
+    .page-body{max-width:var(--max);margin:0 auto;padding:56px 32px 96px}
+    h2{font-family:'Fraunces',serif;font-size:clamp(1.25rem,2.5vw,1.6rem);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:var(--text);margin-top:2.5rem;margin-bottom:0.75rem}
+    p{color:var(--muted);margin-bottom:1rem;font-size:1rem;line-height:1.7}
+    p strong{color:var(--text)}
+    ul,ol{color:var(--muted);margin-bottom:1rem;padding-left:1.4rem}
+    li{margin-bottom:0.4rem;font-size:1rem;line-height:1.65}
+    a{color:var(--purple);text-decoration:none;font-weight:500}
+    a:hover{text-decoration:underline}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:1.5rem 0}
+    .col-card{padding:1.25rem 1.5rem;border-radius:var(--radius);border:1px solid var(--border)}
+    .col-card.yes{background:#f0fdf4;border-color:#86efac}
+    .col-card.no{background:#fef2f2;border-color:#fca5a5}
+    .col-card-title{font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px}
+    .col-card.yes .col-card-title{color:#16a34a}
+    .col-card.no .col-card-title{color:#dc2626}
+    .col-card ul{margin:0;padding-left:1.1rem}
+    .col-card li{font-size:0.875rem;color:var(--muted);margin-bottom:0.35rem}
+    .hl-box{margin:2rem 0;padding:1.25rem 1.5rem;background:var(--purple-tint);border:1px solid var(--border);border-left:3px solid var(--purple);border-radius:var(--radius)}
+    .hl-box p{margin:0;font-size:0.95rem}
+    .dark-box{margin:2rem 0;padding:1.5rem 1.75rem;background:#0f0d18;border-radius:10px;position:relative;overflow:hidden}
+    .dark-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
+    .dark-box-label{font-size:0.65rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:12px}
+    .dark-box p,.dark-box li{color:rgba(255,255,255,0.7)}
+    .dark-box strong{color:#fff}
+    .dark-box ul{margin-bottom:0;padding-left:1.2rem}
+    .cta-row{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);display:flex;gap:12px;flex-wrap:wrap}
+    .btn-grad{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;padding:12px 22px;border-radius:var(--radius);font-weight:600;font-size:0.9rem;text-decoration:none;transition:opacity 0.15s}
+    .btn-grad:hover{opacity:0.85;text-decoration:none}
+    .btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);padding:12px 22px;border-radius:var(--radius);border:1px solid var(--border);font-size:0.9rem;text-decoration:none;transition:border-color 0.15s}
+    .btn-outline:hover{border-color:var(--purple);color:var(--purple);text-decoration:none}
+    footer{background:#0f0d18;border-top:1px solid rgba(255,255,255,0.06);padding:48px 32px}
+    .foot-in{max-width:var(--max);margin:0 auto}
+    .foot-logo{font-family:'Fraunces',serif;font-size:0.95rem;font-weight:500;text-decoration:none;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:28px}
+    .foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:28px}
+    .foot-sec-title{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:12px}
+    .foot-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+    .foot-links a{font-size:0.83rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.15s;font-weight:400}
+    .foot-links a:hover{color:rgba(255,255,255,0.8);text-decoration:none}
+    .foot-legal{font-size:0.75rem;color:rgba(255,255,255,0.2);border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;margin-top:8px}
+    @media(max-width:600px){.page-hero{padding:88px 20px 44px}.page-body{padding:40px 20px 72px}nav{padding:0 20px}footer{padding:40px 20px}.foot-grid{grid-template-columns:1fr;gap:24px}.two-col{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-in">
-    <a href="/" class="nav-logo">
-      <img src="/images/logo.png" alt="Laatuhieronta">
-    </a>
-    <ul class="nav-links">
-      <li><a href="/lisatietoa/">Lisätietoa</a></li>
-      <li><a href="/omavalvonta/jarjestelma/">Järjestelmä</a></li>
-      <li><a href="/tietoa/">Tietoa</a></li>
-    </ul>
+    <a href="/" class="nav-logo">Laatuhieronta.fi</a>
+    <a href="/" class="nav-back">← Etusivu</a>
   </div>
 </nav>
 
-<main>
+<header class="page-hero">
+  <div class="page-hero-in">
+    <div class="eyebrow">Ylläpito</div>
+    <h1>Omavalvontaa ei päivitetä kalenterin mukaan</h1>
+    <p class="page-lead">Päivität suunnitelman kun toimintasi muuttuu. Ei vuosittain, ei kvartaaleittain, ei "varmuuden vuoksi" — vain kun tapahtuu jotain olennaista.</p>
+  </div>
+</header>
 
-<h1>Päivittäminen ja dokumentointi</h1>
+<div class="page-body">
 
-<p>
-  Kaksi yleisintä väärinkäsitystä omavalvonnassa koskevat päivittämistä
-  ja dokumentointia. Molemmat syntyvät siitä, että omavalvontaa
-  käsitellään hallinnollisena rutiinina eikä rakenteellisena välineenä.
-</p>
+  <h2>Milloin päivität — ja milloin et tarvitse</h2>
 
-<h2>Milloin omavalvontaa päivitetään</h2>
+  <div class="two-col">
+    <div class="col-card yes">
+      <div class="col-card-title">Päivitä kun</div>
+      <ul>
+        <li>Toiminnan luonne muuttuu</li>
+        <li>Palveluvalikoima laajenee tai supistuu</li>
+        <li>Toimitila tai työskentelytapa vaihtuu</li>
+        <li>Vastuunjako muuttuu</li>
+        <li>Syntyy toistuva poikkeama</li>
+      </ul>
+    </div>
+    <div class="col-card no">
+      <div class="col-card-title">Ei tarvitse päivittää kun</div>
+      <ul>
+        <li>Toiminta jatkuu ennallaan</li>
+        <li>Palvelut pysyvät samoina</li>
+        <li>Asiakaskunta ei muutu</li>
+        <li>Ei poikkeamia, ei muutoksia</li>
+      </ul>
+    </div>
+  </div>
 
-<p>
-  Omavalvontaa päivitetään kun toiminnassa tapahtuu olennaisia muutoksia.
-  Ei kalenterin mukaan, ei vuosittain automaattisesti.
-</p>
+  <h2>Hiljainen omavalvonta on normaali tila</h2>
 
-<p>Päivitys on tarpeen esimerkiksi kun:</p>
+  <p>Jos toimintasi on vakaata, omavalvontasi on hiljaa. Se on tarkoituksenmukaista. <strong>Kirjaamisen puuttuminen ei ole laiminlyönti</strong> — se tarkoittaa, että rakenne vastaa todellisuutta eikä mikään ole muuttunut.</p>
 
-<ul>
-  <li>toiminnan luonne muuttuu</li>
-  <li>palveluvalikoima laajenee tai supistuu merkittävästi</li>
-  <li>toimintaympäristö vaihtuu (esim. toimitila, työskentelytapa)</li>
-  <li>vastuunjako muuttuu</li>
-  <li>syntyy toistuva poikkeama, joka edellyttää rakenteellista vastausta</li>
-</ul>
+  <p>Jatkuva kirjaaminen ilman muutoksia on merkki siitä, että omavalvontaa käytetään väärin. Rakenne ei ole selkeä, jos se vaatii jatkuvaa ylläpitoa.</p>
 
-<p>Päivitystä ei tarvita kun:</p>
+  <h2>Päivitys ei tarkoita uudelleenkirjoittamista</h2>
 
-<ul>
-  <li>toiminta jatkuu ennallaan</li>
-  <li>palvelut pysyvät samoina</li>
-  <li>vastuu pysyy samana</li>
-</ul>
+  <p>Kun päivitys on tarpeen, se kohdistuu muuttuneeseen kohtaan — ei koko suunnitelmaan. Usein riittää yksi lause tai yksi päivitetty kohta.</p>
 
-<p>
-  Omavalvonta voi olla täysin ajan tasalla ilman uusia merkintöjä.
-  Kirjaamisen puuttuminen ei ole laiminlyönti, jos rakenne vastaa todellista toimintaa.
-</p>
+  <h2>Ylidokumentointi on riski, ei turva</h2>
 
-<h2>Hiljainen omavalvonta on normaali tila</h2>
+  <div class="dark-box">
+    <div class="dark-box-label">Mitä liiallinen dokumentointi tekee</div>
+    <ul>
+      <li>Vaikeuttaa oleellisen löytämistä</li>
+      <li>Luo epäselvyyttä siitä, mikä versio on voimassa</li>
+      <li>Hämärtää vastuun kohdentumisen</li>
+      <li>Kuormittaa ilman mitään lisäarvoa</li>
+    </ul>
+  </div>
 
-<p>
-  Jos toiminta on vakaata, omavalvonta on hiljaa. Tämä on tarkoituksenmukaista.
-</p>
+  <p>Dokumentaation tarkoitus on tehdä toiminta <strong>näkyväksi ja tarkistettavaksi</strong> — ei osoittaa huolellisuutta määrällä.</p>
 
-<p>
-  Jatkuva kirjaaminen ilman toiminnan muutoksia on merkki siitä,
-  että omavalvontaa käytetään väärin — todennäköisesti siksi,
-  että sen rakenne ei ole selkeä.
-</p>
+  <div class="cta-row">
+    <a href="/omavalvonta/jarjestelma/" class="btn-grad">Valmis rakenne arkeen →</a>
+    <a href="/lisatietoa/suunnitelma/" class="btn-outline">Suunnitelman sisältö</a>
+  </div>
 
-<p>
-  Hyvin rakennettu omavalvonta elää toiminnan tahdissa:
-  hiljaa kun kaikki on kunnossa, aktiivisena kun muutoksia tapahtuu.
-</p>
+</div>
 
-<h2>Päivitys ei tarkoita uudelleenkirjoittamista</h2>
-
-<p>
-  Kun päivitys on tarpeen, se kohdistuu muuttuneeseen kohtaan —
-  ei koko suunnitelmaan.
-</p>
-
-<p>Usein riittää:</p>
-
-<ul>
-  <li>yksittäisen kohdan täsmentäminen</li>
-  <li>rajauksen päivittäminen</li>
-  <li>muutoksen lyhyt kirjaaminen</li>
-</ul>
-
-<p>
-  Hyvä rakenne mahdollistaa kohdistetut muutokset ilman koko järjestelmän
-  uudelleen rakentamista.
-</p>
-
-<h2>Ylidokumentointi on riski, ei turva</h2>
-
-<p>
-  Yleinen harhaluulo: mitä enemmän dokumentaatiota, sitä turvallisempaa toiminta on.
-</p>
-
-<p>Todellisuudessa liiallinen dokumentointi:</p>
-
-<ul>
-  <li>vaikeuttaa oleellisen löytämistä</li>
-  <li>luo epäselvyyttä siitä, mikä on voimassa</li>
-  <li>kuormittaa ilman lisäarvoa</li>
-  <li>hämärtää vastuun kohdentumisen</li>
-</ul>
-
-<p>
-  Dokumentaation tarkoitus on tehdä toiminta näkyväksi ja tarkistettavaksi —
-  ei osoittaa huolellisuutta määrällä.
-</p>
-
-<h2>Mitä kannattaa kirjata ja mitä ei</h2>
-
-<p>Kirjaa:</p>
-
-<ul>
-  <li>toiminnan rakenne ja rajaukset</li>
-  <li>vastuu ja vastuunjako</li>
-  <li>poikkeamat ja niiden käsittely</li>
-  <li>olennaiset muutokset toiminnassa</li>
-</ul>
-
-<p>Älä kirjaa:</p>
-
-<ul>
-  <li>rutiineja, jotka toistuvat samanlaisina päivittäin</li>
-  <li>tilanteita, joissa ei tapahdu mitään poikkeavaa</li>
-  <li>asioita, jotka eivät vaikuta toiminnan rakenteeseen tai turvallisuuteen</li>
-</ul>
-
-<p>
-  Selkeys ei synny kirjaamalla kaikkea.
-  Se syntyy kirjaamalla oikeat asiat oikealla tarkkuudella.
-</p>
-
-<p>
-  <a href="/lisatietoa/suunnitelma/">→ Omavalvontasuunnitelma</a><br>
-  <a href="/lisatietoa/vastuu/">→ Laatu ja vastuu</a><br>
-  <a href="/lisatietoa/">← Palaa lisätietoon</a>
-</p>
-
-</main>
-
-<p style="margin:16px 0 0;font-size:13px;">
-  <a href="#" id="analytics-reset">Muuta analytiikkavalintaa</a>
-</p>
+<footer>
+  <div class="foot-in">
+    <a href="/" class="foot-logo">Laatuhieronta.fi</a>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-sec-title">Sisältö</div>
+        <ul class="foot-links">
+          <li><a href="/lisatietoa/omavalvonta/">Mitä omavalvonta on</a></li>
+          <li><a href="/lisatietoa/suunnitelma/">Omavalvontasuunnitelma</a></li>
+          <li><a href="/lisatietoa/paivittaminen/">Päivittäminen</a></li>
+          <li><a href="/lisatietoa/vastuu/">Laatu ja vastuu</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-sec-title">Muut</div>
+        <ul class="foot-links">
+          <li><a href="/omavalvonta/jarjestelma/">Omavalvontajärjestelmä</a></li>
+          <li><a href="/sivustosta/">Sivustosta</a></li>
+          <li><a href="mailto:info@laatuhieronta.fi">info@laatuhieronta.fi</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-legal">© 2026 Fiksiribu</p>
+  </div>
+</footer>
 
 <div id="analytics-consent" style="display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:480px;margin:0 auto;padding:12px 14px;border:1px solid #d4d4d4;border-radius:10px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.12);font:14px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#111;">
   <strong style="display:block;margin:0 0 6px;">Analytiikka</strong>
-  <p style="margin:0 0 10px;">Tällä sivustolla voidaan käyttää kevyttä analytiikkaa käytön ymmärtämiseen ja hankintapolun parantamiseen.</p>
+  <p style="margin:0 0 10px;">Tällä sivustolla voidaan käyttää kevyttä analytiikkaa käytön ymmärtämiseen ja palvelun kehittämiseen.</p>
   <div style="display:flex;gap:8px;flex-wrap:wrap;">
     <button id="analytics-accept" type="button" style="border:0;border-radius:8px;padding:8px 10px;background:#111;color:#fff;cursor:pointer;">Hyväksy analytiikka</button>
     <button id="analytics-decline" type="button" style="border:1px solid #b9b9b9;border-radius:8px;padding:8px 10px;background:#fff;color:#111;cursor:pointer;">Jatka ilman analytiikkaa</button>

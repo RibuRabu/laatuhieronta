@@ -357,13 +357,15 @@
     .btn-outline-light:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
 
     /* FOOTER */
-    footer { background: #0f0d18; border-top: 1px solid rgba(255,255,255,0.06); padding: 36px 32px; }
-    .foot-in { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-    .foot-logo { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 500; text-decoration: none; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .foot-links { display: flex; gap: 24px; list-style: none; }
-    .foot-links a { font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.15s; }
-    .foot-links a:hover { color: rgba(255,255,255,0.7); }
-    .foot-legal { font-size: 0.75rem; color: rgba(255,255,255,0.2); }
+    footer { background: #0f0d18; border-top: 1px solid rgba(255,255,255,0.06); padding: 48px 32px; }
+    .foot-in { max-width: var(--max); margin: 0 auto; }
+    .foot-logo { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 500; text-decoration: none; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; margin-bottom: 28px; }
+    .foot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 28px; }
+    .foot-sec-title { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 12px; }
+    .foot-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 9px; }
+    .foot-links a { font-size: 0.83rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.15s; font-weight: 400; }
+    .foot-links a:hover { color: rgba(255,255,255,0.8); text-decoration: none; }
+    .foot-legal { font-size: 0.75rem; color: rgba(255,255,255,0.2); border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; margin-top: 8px; }
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
@@ -376,6 +378,8 @@
     @media (max-width: 600px) {
       .how-steps, .feat-grid, .who-grid { grid-template-columns: 1fr; }
       .nav-links li:not(:last-child) { display: none; }
+      footer { padding: 40px 20px; }
+      .foot-grid { grid-template-columns: 1fr; gap: 24px; }
     }
   </style>
 </head>
@@ -400,7 +404,7 @@
         <span class="eyebrow-dot"></span>
         Lakivelvoite · Lupa- ja valvontaviraston määräys 1/2024
       </div>
-      <h1>Omavalvontasuunnitelma kuntoon <span class="grad-text">tunnissa</span></h1>
+      <h1>Omavalvonta&shy;suunnitelma kuntoon <span class="grad-text">tunnissa</span></h1>
       <p class="hero-sub">
         Kevyt selaintyökalu sote-alan pienyrittäjälle. Täytä ohjattu lomake, julkaise julkinen linkki — ja lakisääteinen omavalvontavelvoitteesi on hoidettu.
       </p>
@@ -511,7 +515,7 @@
         <div class="feat-ico">☁️</div>
         <h3>Aina saatavilla</h3>
         <p>Selainpohjainen — toimii puhelimella, tabletilla ja tietokoneella. Ei asennuksia.</p>
-        <span class="feat-badge">Next.js · Vercel</span>
+        <span class="feat-badge">Toimii kaikkialla</span>
       </div>
     </div>
   </div>
@@ -525,7 +529,7 @@
       <div class="how-step">
         <div class="step-num-wrap"><div class="step-num">1</div></div>
         <h3>Rekisteröidy ja täytä lomake</h3>
-        <p>Kirjaudu sähköpostilla tai Googlen kautta. Ohjattu lomake vie läpi kaikki vaaditut osiot ymmärrettävällä kielellä.</p>
+        <p>Ohjattu lomake vie läpi kaikki vaaditut osiot ymmärrettävällä kielellä.</p>
         <span class="how-time">⏱ ~45 minuuttia</span>
       </div>
       <div class="how-step">
@@ -647,13 +651,26 @@
 <footer>
   <div class="foot-in">
     <a href="/" class="foot-logo">Laatuhieronta.fi</a>
-    <ul class="foot-links">
-      <li><a href="/lisatietoa/">Lisätietoa</a></li>
-      <li><a href="/omavalvonta/jarjestelma/">Järjestelmä</a></li>
-      <li><a href="/sivustosta/">Sivustosta</a></li>
-      <li><a href="mailto:info@laatuhieronta.fi">info@laatuhieronta.fi</a></li>
-    </ul>
-    <span class="foot-legal">© 2026 Fiksiribu</span>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-sec-title">Sisältö</div>
+        <ul class="foot-links">
+          <li><a href="/lisatietoa/omavalvonta/">Mitä omavalvonta on</a></li>
+          <li><a href="/lisatietoa/suunnitelma/">Omavalvontasuunnitelma</a></li>
+          <li><a href="/lisatietoa/paivittaminen/">Päivittäminen</a></li>
+          <li><a href="/lisatietoa/vastuu/">Laatu ja vastuu</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-sec-title">Muut</div>
+        <ul class="foot-links">
+          <li><a href="/omavalvonta/jarjestelma/">Omavalvontajärjestelmä</a></li>
+          <li><a href="/sivustosta/">Sivustosta</a></li>
+          <li><a href="mailto:info@laatuhieronta.fi">info@laatuhieronta.fi</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-legal">© 2026 Fiksiribu</p>
   </div>
 </footer>
 

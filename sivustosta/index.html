@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sivustosta – Laatuhieronta.fi:n tarina</title>
+  <title>Sivustosta – Laatuhieronta.fi:n tarina | Riikka Kallio</title>
   <meta name="description" content="Miksi Laatuhieronta.fi syntyi ja kuka sen teki. Tarina käytännön tarpeesta, ei konsulttipuheesta.">
   <link rel="canonical" href="https://laatuhieronta.fi/sivustosta/">
-  <link rel="stylesheet" href="/style.css?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -18,7 +20,6 @@
         "name": "Sivustosta – Laatuhieronta.fi:n tarina",
         "inLanguage": "fi",
         "isPartOf": { "@id": "https://laatuhieronta.fi/#website" },
-        "publisher": { "@id": "https://laatuhieronta.fi/#organization" },
         "mainEntity": { "@id": "https://laatuhieronta.fi/sivustosta/#person" }
       },
       {
@@ -38,199 +39,149 @@
   }
   </script>
   <style>
-    .profile-card {
-      margin: 2rem 0;
-      padding: 1.5rem 1.75rem;
-      background: linear-gradient(135deg, #f0ebff 0%, #e6f9fd 100%);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      max-width: 42rem;
-    }
-    .profile-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--purple);
-      margin-bottom: 8px;
-    }
-    .profile-name {
-      font-family: 'Fraunces', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.02em;
-      margin-bottom: 3px;
-    }
-    .profile-title {
-      font-size: 0.875rem;
-      color: var(--muted);
-      margin-bottom: 1.25rem;
-    }
-    .profile-facts {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .profile-facts li {
-      font-size: 0.875rem;
-      color: var(--text);
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-    }
-    .profile-facts li::before {
-      content: '→';
-      color: var(--purple);
-      font-weight: 600;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .profile-links {
-      margin-top: 1.1rem;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(140,82,255,0.15);
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .profile-links a {
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-decoration: none;
-    }
-    .profile-links a:hover { color: var(--purple); }
+    :root{--bg:#f9f7ff;--white:#ffffff;--purple:#8c52ff;--purple-dark:#7540e8;--purple-tint:#f0ebff;--teal:#0cc0df;--grad:linear-gradient(135deg,#8c52ff 0%,#5ce1e6 100%);--text:#19141f;--muted:#655b78;--border:#ddd6f8;--radius:6px;--max:720px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{font-size:16px;scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'Bricolage Grotesque',sans-serif;font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 32px}
+    .nav-in{max-width:var(--max);margin:0 auto;height:58px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;text-decoration:none;letter-spacing:-0.02em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-back{color:var(--muted);font-size:0.875rem;text-decoration:none;transition:color 0.15s}
+    .nav-back:hover{color:var(--text)}
+    .page-hero{padding:104px 32px 56px;background:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(140,82,255,0.07) 0%,transparent 70%),var(--white);border-bottom:1px solid var(--border)}
+    .page-hero-in{max-width:var(--max);margin:0 auto}
+    .eyebrow{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+    h1{font-family:'Fraunces',serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;line-height:1.1;letter-spacing:-0.03em;color:var(--text);margin-bottom:16px}
+    .page-lead{font-size:1.05rem;color:var(--muted);line-height:1.7;max-width:560px}
+    .page-body{max-width:var(--max);margin:0 auto;padding:56px 32px 96px}
+    h2{font-family:'Fraunces',serif;font-size:clamp(1.25rem,2.5vw,1.6rem);font-weight:600;line-height:1.2;letter-spacing:-0.02em;color:var(--text);margin-top:2.5rem;margin-bottom:0.75rem}
+    p{color:var(--muted);margin-bottom:1rem;font-size:1rem;line-height:1.7}
+    p strong{color:var(--text)}
+    ul{color:var(--muted);margin-bottom:1rem;padding-left:1.4rem}
+    li{margin-bottom:0.4rem;font-size:1rem;line-height:1.65}
+    a{color:var(--purple);text-decoration:none;font-weight:500}
+    a:hover{text-decoration:underline}
+    .hl-box{margin:2rem 0;padding:1.25rem 1.5rem;background:var(--purple-tint);border:1px solid var(--border);border-left:3px solid var(--purple);border-radius:var(--radius)}
+    .hl-box p{margin:0;font-size:0.95rem}
+    .profile-card{margin:2rem 0;padding:1.75rem;background:linear-gradient(135deg,#f0ebff 0%,#e6f9fd 100%);border:1px solid var(--border);border-radius:10px}
+    .profile-label{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--purple);margin-bottom:10px}
+    .profile-name{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:700;color:var(--text);letter-spacing:-0.02em;margin-bottom:3px}
+    .profile-title{font-size:0.875rem;color:var(--muted);margin-bottom:1.25rem}
+    .profile-facts{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .profile-facts li{font-size:0.875rem;color:var(--text);display:flex;align-items:flex-start;gap:8px}
+    .profile-facts li::before{content:'→';color:var(--purple);font-weight:600;flex-shrink:0;margin-top:1px}
+    .profile-links{margin-top:1.1rem;padding-top:1rem;border-top:1px solid rgba(140,82,255,0.15);display:flex;gap:16px;flex-wrap:wrap}
+    .profile-links a{font-size:0.8rem;color:var(--muted);text-decoration:none}
+    .profile-links a:hover{color:var(--purple)}
+    .cta-row{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);display:flex;gap:12px;flex-wrap:wrap}
+    .btn-grad{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;padding:12px 22px;border-radius:var(--radius);font-weight:600;font-size:0.9rem;text-decoration:none;transition:opacity 0.15s}
+    .btn-grad:hover{opacity:0.85;text-decoration:none}
+    .btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);padding:12px 22px;border-radius:var(--radius);border:1px solid var(--border);font-size:0.9rem;text-decoration:none;transition:border-color 0.15s}
+    .btn-outline:hover{border-color:var(--purple);color:var(--purple);text-decoration:none}
+    footer{background:#0f0d18;border-top:1px solid rgba(255,255,255,0.06);padding:48px 32px}
+    .foot-in{max-width:var(--max);margin:0 auto}
+    .foot-logo{font-family:'Fraunces',serif;font-size:0.95rem;font-weight:500;text-decoration:none;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:28px}
+    .foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:28px}
+    .foot-sec-title{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:12px}
+    .foot-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+    .foot-links a{font-size:0.83rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.15s;font-weight:400}
+    .foot-links a:hover{color:rgba(255,255,255,0.8);text-decoration:none}
+    .foot-legal{font-size:0.75rem;color:rgba(255,255,255,0.2);border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;margin-top:8px}
+    @media(max-width:600px){.page-hero{padding:88px 20px 44px}.page-body{padding:40px 20px 72px}nav{padding:0 20px}footer{padding:40px 20px}.foot-grid{grid-template-columns:1fr;gap:24px}}
   </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-in">
-    <a href="/" class="nav-logo">
-      <img src="/images/logo.png" alt="Laatuhieronta">
-    </a>
-    <ul class="nav-links">
-      <li><a href="/lisatietoa/">Lisätietoa</a></li>
-      <li><a href="/omavalvonta/jarjestelma/">Järjestelmä</a></li>
-      <li><a href="/tietoa/">Tietoa</a></li>
-    </ul>
+    <a href="/" class="nav-logo">Laatuhieronta.fi</a>
+    <a href="/" class="nav-back">← Etusivu</a>
   </div>
 </nav>
 
-<main>
-
-<h1>Sivustosta</h1>
-
-<p>
-  Hieronta-alalla puhutaan paljon hoidosta, tekniikoista ja asiakaskokemuksesta.
-  Paljon vähemmän puhutaan siitä rakenteesta, jonka varassa koko työ oikeasti seisoo.
-</p>
-
-<p>
-  Omavalvonta. Dokumentointi. Vastuut. Tietosuoja. Käytännöt. Riskienhallinta.
-</p>
-
-<p>
-  Asioita, jotka ovat näkymättömiä silloin kun kaikki toimii —
-  mutta jotka muuttuvat välittömästi tärkeiksi, kun jokin menee pieleen.
-</p>
-
-<h2>Miksi tämä syntyi</h2>
-
-<p>
-  Samaan aikaan kun ammatinharjoittajilta vaaditaan jatkuvasti enemmän selkeyttä,
-  vastuullisuutta ja dokumentointia, suurin osa käytössä olevista ratkaisuista
-  tuntui rakennetun hallintoa varten — ei ihmiselle, joka tekee hoitotyötä yksin
-  pitkän päivän jälkeen.
-</p>
-
-<p>
-  Tietoa löytyi kyllä. Mutta se oli hajallaan.<br>
-  Ohjeita löytyi kyllä. Mutta niiden muuttaminen käytännön toiminnaksi
-  jäi yrittäjän omalle vastuulle.
-</p>
-
-<p>
-  Juuri siihen kohtaan syntyi Laatuhieronta.fi.
-</p>
-
-<h2>Mitä tämä ei ole</h2>
-
-<p>
-  Ei "hyvinvointibrändiksi". Ei konsulttipuheeksi. Eikä geneeriseksi ohjelmistoksi.
-</p>
-
-<p>
-  Vaan työkaluksi ihmiselle, joka haluaa rakentaa toimintansa selkeälle pohjalle
-  ilman, että koko energia katoaa byrokratian hallintaan.
-</p>
-
-<h2>Miten tämä rakennettiin</h2>
-
-<p>
-  Laatuhieronta.fi on rakennettu käytännön työstä käsin.
-  Sen taustalla ei ole ohjelmistotalo, markkinointitiimi tai sijoittajarakenne.
-</p>
-
-<p>Sen taustalla on ammatinharjoittaja, joka joutui itse käymään läpi samat kysymykset:</p>
-
-<ul>
-  <li>Mitä kaikkea oikeasti vaaditaan?</li>
-  <li>Missä nämä asiat pitäisi dokumentoida?</li>
-  <li>Miten tästä rakennetaan järkevä kokonaisuus?</li>
-  <li>Miten omavalvonta pidetään elävänä osana toimintaa — eikä vain pakollisena paperina?</li>
-</ul>
-
-<h2>Kenelle tämä on tehty</h2>
-
-<p>
-  Erityisesti yksinyrittäjille ja pienille toimijoille, jotka haluavat hoitaa
-  työnsä ammattimaisesti — ilman, että heidän tarvitsee muuttua hallintoihmisiksi
-  tehdäkseen sen.
-</p>
-
-<p>
-  Tämä ei lupaa kasvua, vapautta tai kuusinumeroista liiketoimintaa.
-  Tämä on työkalu. Selkeä rakenne ihmiselle, joka haluaa rakentaa työnsä kunnolla.
-</p>
-
-<h2>Tekijä</h2>
-
-<div class="profile-card">
-  <div class="profile-label">Perustaja</div>
-  <div class="profile-name">Riikka Kallio</div>
-  <div class="profile-title">Koulutettu hieroja · Fiksiribu-toiminimi · Y-tunnus 1976813-2</div>
-  <ul class="profile-facts">
-    <li>Helsinki Roosters &amp; Helsinki Wolverines — amerikkalainen jalkapallo</li>
-    <li>Suomen naisten maajoukkue — Euroopan mestaruus</li>
-    <li>Kansainvälinen kilpailija, sumopaini</li>
-    <li>Perustanut Fiksiribu-toiminimen ja Laatuhieronta.fi-palvelun käytännön tarpeesta</li>
-  </ul>
-  <div class="profile-links">
-    <a href="https://www.ruutu.fi/video/2708263" target="_blank" rel="noopener">Ruutu ↗</a>
-    <a href="https://www.hs.fi/urheilu/art-2000002893098.html" target="_blank" rel="noopener">Helsingin Sanomat ↗</a>
-    <a href="https://helsinkiwolverines.com/2022/05/14/riikka-kallio-tauolta-wolverinesiin/" target="_blank" rel="noopener">Helsinki Wolverines ↗</a>
+<header class="page-hero">
+  <div class="page-hero-in">
+    <div class="eyebrow">Tarina</div>
+    <h1>Rakennettu käytännön tarpeesta, ei konsulttipuheesta</h1>
+    <p class="page-lead">Hieronta-alalla puhutaan paljon hoidosta ja asiakaskokemuksesta. Paljon vähemmän puhutaan siitä rakenteesta, jonka varassa koko työ oikeasti seisoo.</p>
   </div>
+</header>
+
+<div class="page-body">
+
+  <h2>Miksi tämä syntyi</h2>
+
+  <p>Omavalvonta. Dokumentointi. Vastuut. Tietosuoja. Riskienhallinta. Asioita, jotka ovat näkymättömiä silloin kun kaikki toimii — mutta jotka muuttuvat välittömästi tärkeiksi kun jokin menee pieleen.</p>
+
+  <p>Samaan aikaan kun ammatinharjoittajilta vaaditaan jatkuvasti enemmän selkeyttä ja dokumentointia, suurin osa käytössä olevista ratkaisuista tuntui rakennetun hallintoa varten — ei ihmiselle, joka tekee hoitotyötä yksin pitkän päivän jälkeen.</p>
+
+  <p>Tietoa löytyi kyllä. Mutta se oli hajallaan. Ohjeita löytyi kyllä. Mutta niiden muuttaminen käytännön toiminnaksi jäi yrittäjän omalle vastuulle.</p>
+
+  <div class="hl-box">
+    <p>Juuri siihen kohtaan syntyi Laatuhieronta.fi — työkaluksi ihmiselle, joka haluaa rakentaa toimintansa selkeälle pohjalle ilman, että koko energia katoaa byrokratian hallintaan.</p>
+  </div>
+
+  <h2>Mitä tämä ei ole</h2>
+
+  <p>Ei "hyvinvointibrändiksi". Ei konsulttipuheeksi. Eikä geneeriseksi ohjelmistoksi.</p>
+
+  <p>Vaan työkalu ihmiselle, joka haluaa hoitaa velvoitteensa kunnolla — ilman lakikirjaa ja ilman turhan työn tuntua.</p>
+
+  <h2>Tekijä</h2>
+
+  <div class="profile-card">
+    <div class="profile-label">Perustaja</div>
+    <div class="profile-name">Riikka Kallio</div>
+    <div class="profile-title">Koulutettu hieroja · Fiksiribu-toiminimi</div>
+    <ul class="profile-facts">
+      <li>Helsinki Roosters &amp; Helsinki Wolverines — amerikkalainen jalkapallo</li>
+      <li>Suomen naisten maajoukkue — Euroopan mestaruus</li>
+      <li>Kansainvälinen kilpailija, sumopaini</li>
+      <li>Perustanut Fiksiribu-toiminimen ja Laatuhieronta.fi-palvelun käytännön tarpeesta</li>
+    </ul>
+    <div class="profile-links">
+      <a href="https://www.ruutu.fi/video/2708263" target="_blank" rel="noopener">Ruutu ↗</a>
+      <a href="https://www.hs.fi/urheilu/art-2000002893098.html" target="_blank" rel="noopener">Helsingin Sanomat ↗</a>
+      <a href="https://helsinkiwolverines.com/2022/05/14/riikka-kallio-tauolta-wolverinesiin/" target="_blank" rel="noopener">Helsinki Wolverines ↗</a>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <a href="/omavalvonta/jarjestelma/" class="btn-grad">Katso omavalvontajärjestelmä →</a>
+    <a href="mailto:info@laatuhieronta.fi" class="btn-outline">info@laatuhieronta.fi</a>
+  </div>
+
 </div>
 
-<p>
-  <a href="/tietoa/">→ Tietoa sivustosta</a><br>
-  <a href="/omavalvonta/jarjestelma/">→ Omavalvontajärjestelmä</a><br>
-  <a href="/">← Etusivulle</a>
-</p>
-
-</main>
-
-<p style="margin:16px 0 0;font-size:13px;">
-  <a href="#" id="analytics-reset">Muuta analytiikkavalintaa</a>
-</p>
+<footer>
+  <div class="foot-in">
+    <a href="/" class="foot-logo">Laatuhieronta.fi</a>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-sec-title">Sisältö</div>
+        <ul class="foot-links">
+          <li><a href="/lisatietoa/omavalvonta/">Mitä omavalvonta on</a></li>
+          <li><a href="/lisatietoa/suunnitelma/">Omavalvontasuunnitelma</a></li>
+          <li><a href="/lisatietoa/paivittaminen/">Päivittäminen</a></li>
+          <li><a href="/lisatietoa/vastuu/">Laatu ja vastuu</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-sec-title">Muut</div>
+        <ul class="foot-links">
+          <li><a href="/omavalvonta/jarjestelma/">Omavalvontajärjestelmä</a></li>
+          <li><a href="/sivustosta/">Sivustosta</a></li>
+          <li><a href="mailto:info@laatuhieronta.fi">info@laatuhieronta.fi</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-legal">© 2026 Fiksiribu</p>
+  </div>
+</footer>
 
 <div id="analytics-consent" style="display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:480px;margin:0 auto;padding:12px 14px;border:1px solid #d4d4d4;border-radius:10px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.12);font:14px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#111;">
   <strong style="display:block;margin:0 0 6px;">Analytiikka</strong>
-  <p style="margin:0 0 10px;">Tällä sivustolla voidaan käyttää kevyttä analytiikkaa käytön ymmärtämiseen ja hankintapolun parantamiseen.</p>
+  <p style="margin:0 0 10px;">Tällä sivustolla voidaan käyttää kevyttä analytiikkaa käytön ymmärtämiseen ja palvelun kehittämiseen.</p>
   <div style="display:flex;gap:8px;flex-wrap:wrap;">
     <button id="analytics-accept" type="button" style="border:0;border-radius:8px;padding:8px 10px;background:#111;color:#fff;cursor:pointer;">Hyväksy analytiikka</button>
     <button id="analytics-decline" type="button" style="border:1px solid #b9b9b9;border-radius:8px;padding:8px 10px;background:#fff;color:#111;cursor:pointer;">Jatka ilman analytiikkaa</button>
