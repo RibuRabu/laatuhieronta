@@ -1,0 +1,394 @@
+/*
+ * LAATUHIERONTA.FI — DESIGN SYSTEM
+ * ─────────────────────────────────
+ * Käytä tätä tiedostoa sovelluksen CSS:n pohjana niin
+ * markkinointisivu ja järjestelmä näyttävät samalta.
+ *
+ * FONTIT (lisää <head>-tagiin):
+ * <link rel="preconnect" href="https://fonts.googleapis.com">
+ * <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ * <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&display=swap" rel="stylesheet">
+ *
+ * Fraunces   → otsikot, logo, isot numerot (serif, ilmeikäs)
+ * Bricolage Grotesque → leipäteksti, UI-elementit (sans-serif)
+ */
+
+/* ─── DESIGN TOKENS ─── */
+:root {
+  /* Taustavärit */
+  --bg:           #f9f7ff;   /* Sivun tausta — erittäin vaalea violetti */
+  --bg-card:      #eeebff;   /* Kortin hover-tausta */
+  --white:        #ffffff;
+
+  /* Brändivärit */
+  --purple:       #8c52ff;
+  --purple-dark:  #7540e8;
+  --purple-tint:  #f0ebff;   /* Kevyt violetti tausta (badget, korostukset) */
+  --teal:         #0cc0df;
+  --teal-tint:    #e6f9fd;
+  --cyan:         #5ce1e6;
+  --yellow:       #ffde59;
+
+  /* Gradientit */
+  --grad:         linear-gradient(135deg, #8c52ff 0%, #5ce1e6 100%);  /* Pääteema */
+  --grad-acc:     linear-gradient(135deg, #0cc0df 0%, #ffde59 100%);  /* Aksentti */
+
+  /* Teksti */
+  --text:         #19141f;   /* Pääotsikot ja tärkeä teksti */
+  --muted:        #655b78;   /* Leipäteksti, selitteet */
+
+  /* Rajat */
+  --border:       #ddd6f8;
+
+  /* Muut */
+  --radius:       6px;
+  --max:          1120px;    /* Markkinointisivun leveys — sovelluksessa voi olla kapeampi */
+}
+
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── TYPOGRAFIA ─── */
+
+/* Otsikot — Fraunces */
+h1, h2, h3, .font-display {
+  font-family: 'Fraunces', serif;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Gradienttiteksti (käytä span-tagissa) */
+.grad-text {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Pieni yläotsikko (KENELLE / OMINAISUUDET jne) */
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 14px;
+}
+
+/* ─── NAVIGAATIO ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 32px;
+}
+.nav-in {
+  max-width: var(--max); margin: 0 auto; height: 58px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 500;
+  text-decoration: none; letter-spacing: -0.02em;
+  background: var(--grad);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.15s; }
+.nav-links a:hover { color: var(--text); }
+
+/* ─── PAINIKKEET ─── */
+
+/* Pääpainike — gradient */
+.btn-grad {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--grad); color: #fff;
+  padding: 13px 24px;
+  border-radius: var(--radius);
+  font-weight: 600; font-size: 0.95rem;
+  text-decoration: none; border: none; cursor: pointer;
+  transition: opacity 0.15s;
+  font-family: inherit;
+}
+.btn-grad:hover { opacity: 0.85; }
+
+/* Toissijainen painike — ääriviiva */
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--text);
+  padding: 13px 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  font-size: 0.95rem; text-decoration: none; cursor: pointer;
+  transition: border-color 0.15s;
+  font-family: inherit;
+}
+.btn-outline:hover { border-color: var(--purple); color: var(--purple); }
+
+/* Toissijainen painike — vaalealla taustalla (tummassa osiossa) */
+.btn-outline-light {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: rgba(255,255,255,0.8);
+  padding: 13px 24px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.18);
+  font-size: 0.95rem; text-decoration: none; cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+  font-family: inherit;
+}
+.btn-outline-light:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
+
+/* Nav CTA-painike */
+.nav-cta {
+  background: var(--grad) !important; color: #fff !important;
+  padding: 8px 18px; border-radius: var(--radius);
+  font-weight: 500 !important; font-size: 0.875rem !important;
+  transition: opacity 0.15s !important;
+}
+.nav-cta:hover { opacity: 0.85; }
+
+/* ─── KORTTIRUUDUKKO (feat/who -tyyli) ─── */
+/* Tasainen 2px-rakopohjainen ruudukko ilman erikseen korttien reunoja */
+.card-grid {
+  display: grid;
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.card-grid-2 { grid-template-columns: 1fr 1fr; }
+
+.card {
+  background: var(--white);
+  padding: 32px;
+  transition: background 0.2s;
+}
+.card:hover { background: var(--purple-tint); }
+
+.card-ico {
+  width: 42px; height: 42px;
+  background: var(--purple-tint);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+}
+
+/* ─── BADGE / TAG ─── */
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--purple-tint);
+  border: 1px solid rgba(140,82,255,0.2);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 0.72rem; font-weight: 500; color: var(--purple);
+}
+.badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--grad); flex-shrink: 0; }
+
+.tag {
+  display: inline-block;
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px; border-radius: 3px;
+}
+.tag-purple { background: var(--purple-tint); color: var(--purple); }
+.tag-teal   { background: var(--teal-tint);   color: var(--teal); }
+.tag-muted  { background: #f0eef5; color: var(--muted); }
+.tag-grad   { background: var(--grad); color: #fff; }
+
+/* ─── LOMAKKEET ─── */
+.field { margin-bottom: 16px; }
+
+.field-label {
+  display: block;
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.04em; color: var(--muted);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--purple);
+  background: var(--purple-tint);
+}
+
+input::placeholder, textarea::placeholder { color: var(--muted); opacity: 0.6; }
+
+/* ─── EDISTYMISASKELEET ─── */
+.progress { display: flex; align-items: center; margin-bottom: 24px; }
+
+.p-step {
+  width: 32px; height: 32px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700; flex-shrink: 0;
+  border: 1.5px solid var(--border); color: var(--muted);
+  font-family: 'Fraunces', serif;
+}
+.p-step.done   { background: var(--grad); border-color: transparent; color: #fff; }
+.p-step.active { border-color: var(--purple); color: var(--purple); box-shadow: 0 0 0 4px rgba(140,82,255,0.12); }
+
+.p-line { flex: 1; height: 1.5px; background: var(--border); }
+.p-line.done { background: linear-gradient(90deg, #8c52ff, #8c52ffa0); }
+
+/* ─── INFO-BOKSIT ─── */
+
+/* Vaalea korostus (tärkeä info) */
+.hl-box {
+  background: var(--purple-tint);
+  border-left: 3px solid var(--purple);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.hl-box strong { color: var(--text); }
+
+/* Tumma infokortti (laki-sitaatti, tärkeä huomio) */
+.dark-box {
+  background: #0f0d18;
+  border-radius: 10px;
+  padding: 28px 32px;
+  position: relative;
+  overflow: hidden;
+  color: rgba(255,255,255,0.75);
+}
+.dark-box::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: var(--grad);
+}
+.dark-box-label {
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: rgba(255,255,255,0.35);
+  margin-bottom: 12px;
+}
+
+/* Varoitus (oranssi) */
+.warn-box {
+  background: #fff8f0;
+  border-left: 3px solid #f59e0b;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.warn-box strong { color: #92400e; }
+
+/* Esimerkki (teal) */
+.example-box {
+  background: var(--teal-tint);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ─── HINNOITTELUKORTTI ─── */
+.pcard {
+  background: var(--white);
+  border: 2px solid var(--purple);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(140,82,255,0.12);
+  position: relative;
+}
+.pcard::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad); }
+
+.price-num {
+  font-family: 'Fraunces', serif;
+  font-size: 2.8rem; font-weight: 700;
+  color: var(--text); line-height: 1;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: #0f0d18;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 48px 32px;
+}
+.foot-in { max-width: var(--max); margin: 0 auto; }
+.foot-logo {
+  font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 500;
+  text-decoration: none;
+  background: var(--grad); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text;
+  display: block; margin-bottom: 28px;
+}
+.foot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 28px; }
+.foot-sec-title {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 12px;
+}
+.foot-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 9px; }
+.foot-links a { font-size: 0.83rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.15s; }
+.foot-links a:hover { color: rgba(255,255,255,0.8); }
+.foot-legal {
+  font-size: 0.75rem; color: rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 20px; margin-top: 8px;
+}
+
+/* ─── APULUOKAT ─── */
+.text-muted  { color: var(--muted); }
+.text-purple { color: var(--purple); }
+.text-teal   { color: var(--teal); }
+.font-serif  { font-family: 'Fraunces', serif; }
+
+/* ─── RESPONSIIVISUUS ─── */
+@media (max-width: 900px) {
+  .card-grid-3 { grid-template-columns: 1fr 1fr; }
+  .card-grid-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
+  .nav-links li:not(:last-child) { display: none; }
+  footer { padding: 40px 20px; }
+  .foot-grid { grid-template-columns: 1fr; gap: 24px; }
+}

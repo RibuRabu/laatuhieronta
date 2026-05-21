@@ -1,0 +1,61 @@
+# Laatuhieronta.fi
+
+> Selainpohjainen työkalu sote-alan itsenäisille ammatinharjoittajille lakisääteisen omavalvontasuunnitelman dokumentointiin. Tekijä: Riikka Kallio (koulutettu hieroja, Fiksiribu-toiminimi).
+
+Sivusto ei anna oikeudellista neuvontaa. Sisältö on yleistä tietoa omavalvontavelvoitteesta.
+
+## Mikä ongelma tämä ratkaisee
+
+Suomessa terveydenhuollon ammattihenkilöillä on lakisääteinen velvoite tehdä omavalvontasuunnitelma (Laki terveydenhuollon ammattihenkilöistä 559/1994, Lupa- ja valvontaviraston määräys 1/2024). Velvoite koskee laillistettuja ja nimikesuojattuja ammattihenkilöitä, jotka toimivat itsenäisinä ammatinharjoittajina.
+
+Suurimmalla osalla näistä ammattilaisista ei ole valmista rakennetta tai selkeitä ohjeita siihen, miten suunnitelma käytännössä tehdään. Laatuhieronta.fi tarjoaa strukturoidun digitaalisen pohjan, joka ohjaa dokumentoimaan oman toiminnan oikeissa kohdissa.
+
+## Kenelle velvoite kuuluu
+
+Lakisääteinen velvoite (rekisteröity Soteri-rekisteriin, Lupa- ja valvontavirasto):
+
+- Koulutettu hieroja, urheiluhieroja (nimikesuojattu)
+- Fysioterapeutti (laillistettu)
+- Toimintaterapeutti (laillistettu)
+- Jalkaterapeutti (nimikesuojattu)
+- Psykologi (laillistettu)
+- Psykoterapeutti (nimikesuojattu)
+- Kiropraktikko, naprapaatti, osteopaatti (nimikesuojattu)
+- Muut laillistetut tai nimikesuojatut terveydenhuollon ammattihenkilöt yksityisellä vastaanotolla
+
+Vapaaehtoinen mutta suositeltava:
+
+- Kosmetologit (perushoitoja tekevät — sote-lain mukainen velvoite ei koske, mutta terveydensuojelulaki ja kuluttajansuojalaki asettavat muita vaatimuksia)
+- Hyvinvointialan yrittäjät
+- Wellness-palvelujen tarjoajat
+
+## Tuote
+
+Strukturoitu omavalvonnan dokumentointirakenne selaimessa. Ei erillisiä ohjelmistoja.
+
+Hinta: 19,90 €/kk. Kuukausitilaus, ei sitoutumista.
+
+Yhteys: info@laatuhieronta.fi
+
+## Sivukartta
+
+- / — Etusivu ja tuote-esittely
+- /omavalvonta/jarjestelma/ — Tuotesivu, hinnoittelu, kenelle sopii
+- /lisatietoa/omavalvonta/ — Mitä omavalvonta on ja mistä velvoite syntyy
+- /lisatietoa/suunnitelma/ — Omavalvontasuunnitelman rakenne ja sisältö
+- /lisatietoa/paivittaminen/ — Milloin ja miten suunnitelmaa päivitetään
+- /lisatietoa/vastuu/ — Laatu, vastuu ja miksi dokumentointi on tärkeää
+- /sivustosta/ — Tekijätiedot (Riikka Kallio, koulutettu hieroja)
+- /blogi/ — Artikkeleja omavalvonnasta
+
+## Blogiartikkelit
+
+- /blogi/ammattiasema-ja-velvoite/ — Laillistettu vs. nimikesuojattu ammattihenkilö: ero käytännössä
+- /blogi/omavalvonta-valvontakaynti/ — Mitä Luovan valvontakäynnillä tarkastetaan
+- /blogi/poikkeaman-kirjaaminen/ — Miten poikkeama kirjataan oikein
+- /blogi/kosmetologi-omavalvonta-2025/ — Kosmetologin omavalvonta 2025: mitä laki oikeasti sanoo
+- /blogi/suunnitelma-vs-jarjestelma/ — Omavalvontasuunnitelma vs. omavalvontajärjestelmä: mikä ero
+
+## Tekijä
+
+Riikka Kallio — koulutettu hieroja, Fiksiribu-toiminimi. Rakensi Laatuhieronta.fi:n omasta käytännön tarpeesta. Ei ole lakimies eikä oikeudellinen neuvonantaja.
